@@ -10,7 +10,7 @@
     "type": "catalogue",
     "catalogueLinks": [
       {"name": "Sellsword", "id": "49c5-a2f3-1a00-93ae", "importRootEntries": true, "targetId": "bf36-ab70-4e59-f5c7", "type": "catalogue"},
-      {"name": "Campaign", "id": "460a-c8a8-78bd-65fc", "targetId": "1417-89c4-f679-60d8", "type": "catalogue"}
+      {"name": "Campaign", "id": "460a-c8a8-78bd-65fc", "importRootEntries": true, "targetId": "1417-89c4-f679-60d8", "type": "catalogue"}
     ],
     "forceEntries": [
       {
@@ -19,6 +19,7 @@
         "hidden": false,
         "categoryLinks": [
           {"name": "Configuration", "id": "56b5-c312-5a5e-8710", "hidden": false, "targetId": "a7f7-a7e7-379c-aa0f"},
+          {"name": "Campaign", "id": "265f-b9e5-51fd-c229", "hidden": false, "targetId": "2921-b7da-80b7-3bbc"},
           {
             "name": "Spellbook",
             "id": "03b1-49e3-72db-eb2a",

@@ -8,6 +8,284 @@
     "library": true,
     "revision": 1,
     "type": "catalogue",
-    "sharedSelectionEntries": [{"name": "Experience", "id": "06f1-1d52-83c7-2943", "hidden": false, "import": true, "type": "upgrade"}]
+    "categoryEntries": [{"name": "Campaign", "id": "2921-b7da-80b7-3bbc", "hidden": false}],
+    "costTypes": [{"name": "Wizard Experience", "id": "a92e-f1c9-6aa7-8c9b", "defaultCostLimit": -1, "hidden": false}],
+    "entryLinks": [
+      {"name": "Stash", "id": "fb7a-21d9-2747-4263", "hidden": false, "import": true, "sortIndex": 1, "targetId": "3ffc-e82d-b35b-9d54", "type": "selectionEntry"},
+      {"name": "Base", "id": "5b30-8189-b0cf-e932", "hidden": false, "import": true, "sortIndex": 2, "targetId": "0c1e-35e6-9fea-e6c8", "type": "selectionEntry"},
+      {"name": "Games", "id": "a81d-3454-7652-6321", "hidden": false, "import": true, "targetId": "41e3-0078-7eb7-e70b", "type": "selectionEntry"}
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "Base",
+        "id": "0c1e-35e6-9fea-e6c8",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Campaign", "id": "4c69-dd3d-88ef-5635", "hidden": false, "primary": true, "targetId": "2921-b7da-80b7-3bbc"}],
+        "constraints": [{"id": "fe5d-d4cf-a9ba-c1ec", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}],
+        "entryLinks": [
+          {"name": "Base Location", "id": "5d40-f70c-0864-6cde", "hidden": false, "import": true, "targetId": "0883-64fe-1263-b5e5", "type": "selectionEntryGroup"},
+          {"name": "Base Resources", "id": "05fd-a3dc-0a82-9347", "hidden": false, "import": true, "targetId": "1320-902c-42b7-5e7b", "type": "selectionEntryGroup"}
+        ]
+      },
+      {
+        "name": "Stash",
+        "id": "3ffc-e82d-b35b-9d54",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Campaign", "id": "14af-0ba8-2012-370e", "hidden": false, "primary": true, "targetId": "2921-b7da-80b7-3bbc"}],
+        "constraints": [{"id": "11f4-b8ae-c823-bdaf", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}],
+        "selectionEntries": [
+          {
+            "name": "Gold Crowns",
+            "id": "3065-6d41-7c1b-2766",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 1}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          }
+        ]
+      },
+      {
+        "name": "Games",
+        "id": "41e3-0078-7eb7-e70b",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Campaign", "id": "368b-64b6-c0ce-6bfb", "hidden": false, "primary": true, "targetId": "2921-b7da-80b7-3bbc"}],
+        "constraints": [{"id": "2345-9780-caa0-22d7", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}],
+        "entryLinks": [{"name": "Game", "id": "ccf7-fc14-d38f-fc6e", "hidden": false, "import": true, "targetId": "b03e-a46d-a00f-d0a8", "type": "selectionEntry"}]
+      },
+      {
+        "name": "Game",
+        "id": "b03e-a46d-a00f-d0a8",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {"name": "Wizard Experience", "id": "4d26-34a6-917c-4474", "hidden": false, "import": true, "targetId": "0620-2b94-7d73-d0fc", "type": "selectionEntryGroup"},
+          {"name": "Treasure", "id": "1165-dfc7-99a0-db0f", "hidden": false, "import": true, "targetId": "9b45-54ce-0dd8-4960", "type": "selectionEntryGroup"}
+        ]
+      },
+      {
+        "name": "Treasure",
+        "id": "2832-7923-98f3-a8cd",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "selectionEntries": [{"name": "New Entry", "id": "9cfa-e64e-3338-db44", "hidden": false, "import": true, "type": "upgrade"}]
+      }
+    ],
+    "sharedSelectionEntryGroups": [
+      {
+        "name": "Base Location",
+        "id": "0883-64fe-1263-b5e5",
+        "collapsible": true,
+        "hidden": false,
+        "constraints": [{"id": "9f1c-2b48-9e24-6178", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "selectionEntries": [
+          {"name": "Inn", "id": "fc9e-ecb1-a196-6b7f", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Temple", "id": "8132-13d3-f137-8cc8", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Crypt", "id": "b843-d70b-0130-74be", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Tower", "id": "5d9a-ec7a-e7b5-87af", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Treasury", "id": "9114-1c8e-1af9-850d", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Brewery", "id": "ec2d-35f2-2515-42b3", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Library", "id": "adf6-b807-1d42-22d7", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Laboratory", "id": "b13b-8add-d0e2-5c5f", "hidden": false, "import": true, "type": "upgrade"}
+        ]
+      },
+      {
+        "name": "Base Resources",
+        "id": "1320-902c-42b7-5e7b",
+        "collapsible": true,
+        "hidden": false,
+        "selectionEntries": [
+          {
+            "name": "Kennel",
+            "id": "5ad4-8d46-f1b4-0cb1",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "56ea-dc2f-3b85-a3b7", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 400}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          },
+          {
+            "name": "Giant Cauldron",
+            "id": "cecb-ff16-7c85-6891",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "e956-4773-cd6c-ea2b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 250}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          },
+          {
+            "name": "Enchanter's Workshop",
+            "id": "c169-fe12-0884-9cd5",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "e456-f4ef-0309-fae3", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 400}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          },
+          {
+            "name": "Crystal Ball",
+            "id": "8d76-7ea4-b004-374c",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "6217-2772-8223-64d4", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 250}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          },
+          {
+            "name": "Scriptorium",
+            "id": "55de-6e10-ba9a-fd45",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "00d1-63bc-e04f-03b9", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 200}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          },
+          {
+            "name": "Celestial Telescope",
+            "id": "7551-2375-0d1a-67ed",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "76c8-9471-c121-46a7", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 250}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          },
+          {
+            "name": "Summoning Circle",
+            "id": "f25e-1c3a-57ed-c9bc",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "8d34-54bb-93f1-dd69", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 300}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          },
+          {
+            "name": "Carrier Pigeons",
+            "id": "57ca-067c-f5c6-a312",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "c48b-2dd9-17e9-f267", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 50}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          },
+          {
+            "name": "Arcane Candle",
+            "id": "e4d2-8ad7-ec75-97d4",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "e4ad-1b98-3abb-0398", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 100}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          },
+          {
+            "name": "Summoning Candle",
+            "id": "38ff-e96c-15a7-261c",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "4999-00ee-2b54-717b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 100}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          },
+          {
+            "name": "Sarcophagus of Healing",
+            "id": "5ab3-7ee5-becf-270f",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "6bbf-06f5-a69f-e007", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 300}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}]
+          }
+        ]
+      },
+      {
+        "name": "Wizard Experience",
+        "id": "0620-2b94-7d73-d0fc",
+        "collapsible": true,
+        "hidden": false,
+        "selectionEntries": [
+          {
+            "name": "Failed casts that resulted in the wizard or apprentice suffering damage",
+            "id": "1117-3557-3965-b749",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 3,
+            "type": "upgrade",
+            "costs": [
+              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 5}
+            ]
+          },
+          {
+            "name": "Successful casts with a casting number greater than 6",
+            "id": "38b3-d3ee-2db7-fc74",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "type": "upgrade",
+            "costs": [
+              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 10}
+            ]
+          },
+          {
+            "name": "Wizard participated",
+            "id": "6e39-5603-ee0e-a719",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "type": "upgrade",
+            "constraints": [{"id": "9031-f167-e9e0-be18", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [
+              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 40}
+            ]
+          },
+          {
+            "name": "Treasure tokens secured",
+            "id": "7943-17dd-da1d-9bab",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 4,
+            "type": "upgrade",
+            "costs": [
+              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 40}
+            ]
+          },
+          {
+            "name": "Uncontrolled creatures killed",
+            "id": "d3f5-9f1f-6629-f571",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 5,
+            "type": "upgrade",
+            "constraints": [{"id": "d3b6-e048-65fa-c466", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 10}],
+            "costs": [
+              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 5}
+            ]
+          }
+        ]
+      },
+      {"name": "Captain Experience", "id": "3d05-8970-1bda-5bbf", "hidden": false},
+      {
+        "name": "Treasure",
+        "id": "9b45-54ce-0dd8-4960",
+        "collapsible": true,
+        "hidden": false,
+        "entryLinks": [{"name": "Treasure", "id": "9225-d8d6-deda-a17a", "hidden": false, "import": true, "targetId": "2832-7923-98f3-a8cd", "type": "selectionEntry"}]
+      }
+    ]
   }
 }
