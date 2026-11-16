@@ -15,7 +15,9 @@
     "entryLinks": [
       {"name": "Archer", "id": "58da-c008-2132-03b1", "hidden": false, "import": true, "targetId": "5278-f869-3f7f-d1f8", "type": "selectionEntry"},
       {"name": "Thief", "id": "5b26-290e-afc7-79ee", "hidden": false, "import": true, "targetId": "d5dd-ae5a-347b-a0b3", "type": "selectionEntry"},
-      {"name": "Thug", "id": "cbf0-a875-ec87-8420", "hidden": false, "import": true, "targetId": "98d7-4f13-c7ad-7fed", "type": "selectionEntry"}
+      {"name": "Thug", "id": "cbf0-a875-ec87-8420", "hidden": false, "import": true, "targetId": "98d7-4f13-c7ad-7fed", "type": "selectionEntry"},
+      {"name": "Wizard", "id": "0d43-b240-5e7e-e554", "hidden": false, "import": true, "targetId": "e22d-8161-dda1-529d", "type": "selectionEntry"},
+      {"name": "Apprentice", "id": "9a69-9ffc-2a76-e777", "hidden": false, "import": true, "targetId": "8ce8-8483-653b-9d83", "type": "selectionEntry"}
     ],
     "forceEntries": [
       {
@@ -102,21 +104,9 @@
         "hidden": false,
         "kind": "weapon",
         "characteristicTypes": [
-          {
-            "name": "Damage Modifier",
-            "id": "31d0-db21-9ef7-6d03",
-            "formatRules": [{"name": "New Format Rule", "id": "cca3-76b0-e6dc-1fc7", "comment": "Empty → -", "hidden": false, "match": "^$", "replace": "-", "type": "regex"}]
-          },
-          {
-            "name": "Maximum Range",
-            "id": "5b03-a022-3c5f-bbd3",
-            "formatRules": [{"name": "New Format Rule", "id": "4683-806f-2827-84ec", "comment": "Empty → -", "hidden": false, "match": "^$", "replace": "-", "type": "regex"}]
-          },
-          {
-            "name": "Notes",
-            "id": "c52e-b236-75ed-b5f0",
-            "formatRules": [{"name": "New Format Rule", "id": "2d5e-6377-e19e-a9b9", "comment": "Empty → -", "hidden": false, "match": "^$", "replace": "-", "type": "regex"}]
-          }
+          {"name": "Damage Modifier", "id": "31d0-db21-9ef7-6d03"},
+          {"name": "Maximum Range", "id": "5b03-a022-3c5f-bbd3"},
+          {"name": "Notes", "id": "c52e-b236-75ed-b5f0"}
         ]
       },
       {
@@ -124,14 +114,7 @@
         "id": "4fa5-487f-7799-5fc3",
         "hidden": false,
         "kind": "weapon",
-        "characteristicTypes": [
-          {"name": "Armour Modifier", "id": "1f94-1b56-8c2b-8481"},
-          {
-            "name": "Notes",
-            "id": "c083-6ccd-5453-cd3f",
-            "formatRules": [{"name": "New Format Rule", "id": "4614-ae4f-b538-c6fa", "comment": "Empty → -", "hidden": false, "match": "^$", "replace": "-", "type": "regex"}]
-          }
-        ]
+        "characteristicTypes": [{"name": "Armour Modifier", "id": "1f94-1b56-8c2b-8481"}, {"name": "Notes", "id": "c083-6ccd-5453-cd3f"}]
       },
       {
         "name": "Spell",
