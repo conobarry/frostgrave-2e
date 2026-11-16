@@ -252,6 +252,7 @@
       {
         "name": "Animal Companion",
         "id": "32d0-fde5-f726-f55a",
+        "comment": "Witch",
         "hidden": false,
         "typeId": "887f-afd0-0d61-f14b",
         "typeName": "Spell",
@@ -264,11 +265,156 @@
             "$text": "The spellcaster summons an animal companion of their choice from the following options to become a permanent member of their warband: bear (page 179), ice toad (page 180), snow leopard (page 182), or wolf (page 182). All Animal Companions count as standard soldiers. Animal companions are more strong-willed than wild examples of their species and receive a permanent +3 Will. A spellcaster may only have one animal companion at any time.",
             "typeId": "3908-0411-0ad8-8f19"
           }
+        ],
+        "modifiers": [
+          {
+            "comment": "Aligned",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "b1d0-ff36-b47b-f18a",
+                    "childName": "Enchanter",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "1622-4a14-5cb8-4cac",
+                    "childName": "Necromancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7f4c-5614-9dbe-5398",
+                    "childName": "Summoner",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Apprentice",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "8fff-2d5e-cbae-f80c",
+                "childName": "Apprentice",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "ancestor",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "comment": "Neutral",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "81dc-342f-c6c4-ece6",
+                    "childName": "Chronomancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "b3e9-4955-6fe5-aecf",
+                    "childName": "Elementalist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "06e5-e242-4624-09eb",
+                    "childName": "Illusionist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "49f1-b367-9ea6-10b8",
+                    "childName": "Sigilist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "8484-471a-ec04-0826",
+                    "childName": "Thaumaturge",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Opposed",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 6,
+            "conditions": [
+              {
+                "childId": "4ebb-d6e2-fb24-f65e",
+                "childName": "Soothsayer",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
         ]
       },
       {
         "name": "Imp",
         "id": "5010-c524-5307-49e4",
+        "comment": "Summoner",
         "hidden": false,
         "typeId": "887f-afd0-0d61-f14b",
         "typeName": "Spell",
@@ -313,6 +459,1136 @@
                 "scope": "ancestor",
                 "shared": true,
                 "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brew Potion",
+        "id": "12ed-f306-c1eb-b29b",
+        "comment": "Witch",
+        "hidden": false,
+        "typeId": "887f-afd0-0d61-f14b",
+        "typeName": "Spell",
+        "characteristics": [
+          {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
+          {"name": "Casting Number", "$text": "12", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Category", "$text": "Out of Game (B)", "typeId": "8812-f09a-8aef-84dc"},
+          {
+            "name": "Description",
+            "$text": "The spellcaster creates one Lesser Potion of their choice (page 86) that may be sold, stored in the wizard’s vault, or given to a member of the warband. A wizard (and only a wizard) may use this spell to create a Greater Potion (page 87). First, they must declare what potion they are attempting to brew and pay the listed ingredients cost. The wizard should then roll to cast Brew Potion with a -4 to the Casting Roll. If successful, the potion is created and can be immediately assigned to a figure in the warband, sold, or stored in the wizard’s vault. If unsuccessful, the potion is not created and the money spent on ingredients is lost.",
+            "typeId": "3908-0411-0ad8-8f19"
+          }
+        ],
+        "modifiers": [
+          {
+            "comment": "Aligned",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "b1d0-ff36-b47b-f18a",
+                    "childName": "Enchanter",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "1622-4a14-5cb8-4cac",
+                    "childName": "Necromancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7f4c-5614-9dbe-5398",
+                    "childName": "Summoner",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Apprentice",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "8fff-2d5e-cbae-f80c",
+                "childName": "Apprentice",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "ancestor",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "comment": "Neutral",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "81dc-342f-c6c4-ece6",
+                    "childName": "Chronomancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "b3e9-4955-6fe5-aecf",
+                    "childName": "Elementalist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "06e5-e242-4624-09eb",
+                    "childName": "Illusionist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "49f1-b367-9ea6-10b8",
+                    "childName": "Sigilist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "8484-471a-ec04-0826",
+                    "childName": "Thaumaturge",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Opposed",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 6,
+            "conditions": [
+              {
+                "childId": "4ebb-d6e2-fb24-f65e",
+                "childName": "Soothsayer",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Control Animal",
+        "id": "d639-5cc9-cbda-34d4",
+        "comment": "Witch",
+        "hidden": false,
+        "typeId": "887f-afd0-0d61-f14b",
+        "typeName": "Spell",
+        "characteristics": [
+          {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
+          {"name": "Casting Number", "$text": "12", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
+          {
+            "name": "Description",
+            "$text": "The target animal must make an immediate Will Roll with a Target Number equal to the Casting Roll. If the roll fails, the  animal becomes a temporary member of the spellcaster’s warband. This control lasts for the rest of the game or until the spell is cancelled. The spellcaster may spend an action to cancel this spell. A spellcaster may only control one animal at a time.",
+            "typeId": "3908-0411-0ad8-8f19"
+          }
+        ],
+        "modifiers": [
+          {
+            "comment": "Aligned",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "b1d0-ff36-b47b-f18a",
+                    "childName": "Enchanter",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "1622-4a14-5cb8-4cac",
+                    "childName": "Necromancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7f4c-5614-9dbe-5398",
+                    "childName": "Summoner",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Apprentice",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "8fff-2d5e-cbae-f80c",
+                "childName": "Apprentice",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "ancestor",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "comment": "Neutral",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "81dc-342f-c6c4-ece6",
+                    "childName": "Chronomancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "b3e9-4955-6fe5-aecf",
+                    "childName": "Elementalist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "06e5-e242-4624-09eb",
+                    "childName": "Illusionist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "49f1-b367-9ea6-10b8",
+                    "childName": "Sigilist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "8484-471a-ec04-0826",
+                    "childName": "Thaumaturge",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Opposed",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 6,
+            "conditions": [
+              {
+                "childId": "4ebb-d6e2-fb24-f65e",
+                "childName": "Soothsayer",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Curse",
+        "id": "3d43-aa05-4079-eb95",
+        "comment": "Witch",
+        "hidden": false,
+        "typeId": "887f-afd0-0d61-f14b",
+        "typeName": "Spell",
+        "characteristics": [
+          {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
+          {"name": "Casting Number", "$text": "8", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
+          {
+            "name": "Description",
+            "$text": "The target suffers -2 to all die rolls. At the end of each turn, the target may make a Will Roll with the Target Number equal to the Casting Roll (at -2, of course). If successful, this spell is cancelled. Curse cannot be cast on a figure already suffering the effects of a Curse spell.",
+            "typeId": "3908-0411-0ad8-8f19"
+          }
+        ],
+        "modifiers": [
+          {
+            "comment": "Aligned",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "b1d0-ff36-b47b-f18a",
+                    "childName": "Enchanter",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "1622-4a14-5cb8-4cac",
+                    "childName": "Necromancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7f4c-5614-9dbe-5398",
+                    "childName": "Summoner",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Apprentice",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "8fff-2d5e-cbae-f80c",
+                "childName": "Apprentice",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "ancestor",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "comment": "Neutral",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "81dc-342f-c6c4-ece6",
+                    "childName": "Chronomancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "b3e9-4955-6fe5-aecf",
+                    "childName": "Elementalist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "06e5-e242-4624-09eb",
+                    "childName": "Illusionist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "49f1-b367-9ea6-10b8",
+                    "childName": "Sigilist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "8484-471a-ec04-0826",
+                    "childName": "Thaumaturge",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Opposed",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 6,
+            "conditions": [
+              {
+                "childId": "4ebb-d6e2-fb24-f65e",
+                "childName": "Soothsayer",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Familiar",
+        "id": "3289-0d59-6452-1504",
+        "comment": "Witch",
+        "hidden": false,
+        "typeId": "887f-afd0-0d61-f14b",
+        "typeName": "Spell",
+        "characteristics": [
+          {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
+          {"name": "Casting Number", "$text": "10", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Category", "$text": "Out of Game (B)", "typeId": "8812-f09a-8aef-84dc"},
+          {
+            "name": "Description",
+            "$text": "The spellcaster gains a familiar, which can take the form of any small creature. It is not depicted on the table, unless the player wants to include it on the spellcaster figure. A spellcaster with a familiar gains +2 Health (write as a split stat). If the spellcaster is ever reduced to 1 Health or less, the familiar is destroyed. At the start of the next game, the spellcaster reverts to their normal Health, unless another Familiar spell is successfully cast",
+            "typeId": "3908-0411-0ad8-8f19"
+          }
+        ],
+        "modifiers": [
+          {
+            "comment": "Aligned",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "b1d0-ff36-b47b-f18a",
+                    "childName": "Enchanter",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "1622-4a14-5cb8-4cac",
+                    "childName": "Necromancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7f4c-5614-9dbe-5398",
+                    "childName": "Summoner",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Apprentice",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "8fff-2d5e-cbae-f80c",
+                "childName": "Apprentice",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "ancestor",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "comment": "Neutral",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "81dc-342f-c6c4-ece6",
+                    "childName": "Chronomancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "b3e9-4955-6fe5-aecf",
+                    "childName": "Elementalist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "06e5-e242-4624-09eb",
+                    "childName": "Illusionist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "49f1-b367-9ea6-10b8",
+                    "childName": "Sigilist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "8484-471a-ec04-0826",
+                    "childName": "Thaumaturge",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Opposed",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 6,
+            "conditions": [
+              {
+                "childId": "4ebb-d6e2-fb24-f65e",
+                "childName": "Soothsayer",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Fog",
+        "id": "c8a2-668b-6078-0862",
+        "comment": "Witch",
+        "hidden": false,
+        "typeId": "887f-afd0-0d61-f14b",
+        "typeName": "Spell",
+        "characteristics": [
+          {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
+          {"name": "Casting Number", "$text": "8", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
+          {
+            "name": "Description",
+            "$text": "Place a line of fog, 6” long, 3” high, and 1” thick anywhere on the table as long as some part of it is within line of sight of the spellcaster and all of it is within 24”. Figures can move through the fog with no penalty, but line of sight may not be drawn through it. At the start of each new turn, roll a die. On a result of 1–4 the fog dissipates and is removed from the table.",
+            "typeId": "3908-0411-0ad8-8f19"
+          }
+        ],
+        "modifiers": [
+          {
+            "comment": "Aligned",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "b1d0-ff36-b47b-f18a",
+                    "childName": "Enchanter",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "1622-4a14-5cb8-4cac",
+                    "childName": "Necromancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7f4c-5614-9dbe-5398",
+                    "childName": "Summoner",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Apprentice",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "8fff-2d5e-cbae-f80c",
+                "childName": "Apprentice",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "ancestor",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "comment": "Neutral",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "81dc-342f-c6c4-ece6",
+                    "childName": "Chronomancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "b3e9-4955-6fe5-aecf",
+                    "childName": "Elementalist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "06e5-e242-4624-09eb",
+                    "childName": "Illusionist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "49f1-b367-9ea6-10b8",
+                    "childName": "Sigilist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "8484-471a-ec04-0826",
+                    "childName": "Thaumaturge",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Opposed",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 6,
+            "conditions": [
+              {
+                "childId": "4ebb-d6e2-fb24-f65e",
+                "childName": "Soothsayer",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mud",
+        "id": "79e5-a7d7-0781-45ca",
+        "comment": "Witch",
+        "hidden": false,
+        "typeId": "887f-afd0-0d61-f14b",
+        "typeName": "Spell",
+        "characteristics": [
+          {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
+          {"name": "Casting Number", "$text": "10", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
+          {"name": "Description", "$text": "All ground within 3” of a target point becomes rough ground.", "typeId": "3908-0411-0ad8-8f19"}
+        ],
+        "modifiers": [
+          {
+            "comment": "Aligned",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "b1d0-ff36-b47b-f18a",
+                    "childName": "Enchanter",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "1622-4a14-5cb8-4cac",
+                    "childName": "Necromancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7f4c-5614-9dbe-5398",
+                    "childName": "Summoner",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Apprentice",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "8fff-2d5e-cbae-f80c",
+                "childName": "Apprentice",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "ancestor",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "comment": "Neutral",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "81dc-342f-c6c4-ece6",
+                    "childName": "Chronomancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "b3e9-4955-6fe5-aecf",
+                    "childName": "Elementalist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "06e5-e242-4624-09eb",
+                    "childName": "Illusionist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "49f1-b367-9ea6-10b8",
+                    "childName": "Sigilist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "8484-471a-ec04-0826",
+                    "childName": "Thaumaturge",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Opposed",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 6,
+            "conditions": [
+              {
+                "childId": "4ebb-d6e2-fb24-f65e",
+                "childName": "Soothsayer",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Poison Dart",
+        "id": "3dec-29b1-5041-2e10",
+        "comment": "Witch",
+        "hidden": false,
+        "typeId": "887f-afd0-0d61-f14b",
+        "typeName": "Spell",
+        "characteristics": [
+          {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
+          {"name": "Casting Number", "$text": "10", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
+          {
+            "name": "Description",
+            "$text": "Make an immediate plus +3 poisoned shooting attack against the target figure. This is a non-magic attack.",
+            "typeId": "3908-0411-0ad8-8f19"
+          }
+        ],
+        "modifiers": [
+          {
+            "comment": "Aligned",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "b1d0-ff36-b47b-f18a",
+                    "childName": "Enchanter",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "1622-4a14-5cb8-4cac",
+                    "childName": "Necromancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7f4c-5614-9dbe-5398",
+                    "childName": "Summoner",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Apprentice",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "8fff-2d5e-cbae-f80c",
+                "childName": "Apprentice",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "ancestor",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "comment": "Neutral",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "81dc-342f-c6c4-ece6",
+                    "childName": "Chronomancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "b3e9-4955-6fe5-aecf",
+                    "childName": "Elementalist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "06e5-e242-4624-09eb",
+                    "childName": "Illusionist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "49f1-b367-9ea6-10b8",
+                    "childName": "Sigilist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "8484-471a-ec04-0826",
+                    "childName": "Thaumaturge",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Opposed",
+            "field": "58ac-2774-9f17-eabf",
+            "type": "increment",
+            "value": 6,
+            "conditions": [
+              {
+                "childId": "4ebb-d6e2-fb24-f65e",
+                "childName": "Soothsayer",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
                 "value": 1
               }
             ]
@@ -450,20 +1726,35 @@
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 100}],
         "entryLinks": [{"name": "Spells", "id": "8435-50c6-a98c-4f9a", "hidden": false, "import": true, "targetId": "44bb-ed77-f0d4-e529", "type": "selectionEntryGroup"}],
         "infoLinks": [{"name": "Apprentice", "id": "0d4f-64b9-f1ae-22a0", "hidden": false, "targetId": "72ef-6247-c921-dc63", "type": "profile"}]
-      },
-      {"name": "Witch", "id": "fffb-c3c3-7fbd-4092", "hidden": false, "import": true, "type": "upgrade"}
+      }
     ],
     "sharedSelectionEntryGroups": [
       {
-        "name": "Wizard Types",
+        "name": "Wizard Type",
         "id": "b287-4a99-ff33-6c9c",
+        "collapsible": true,
         "hidden": false,
-        "constraints": [{"id": "3b87-8860-a387-e9c8", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
-        "entryLinks": [{"name": "Witch", "id": "3b20-5a17-de67-137f", "hidden": false, "import": true, "targetId": "fffb-c3c3-7fbd-4092", "type": "selectionEntry"}]
+        "constraints": [
+          {"id": "3b87-8860-a387-e9c8-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+          {"id": "3b87-8860-a387-e9c8-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+        ],
+        "selectionEntries": [
+          {"name": "Witch", "id": "fffb-c3c3-7fbd-4092", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Chronomancer", "id": "81dc-342f-c6c4-ece6", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Elementalist", "id": "b3e9-4955-6fe5-aecf", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Enchanter", "id": "b1d0-ff36-b47b-f18a", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Illusionist", "id": "06e5-e242-4624-09eb", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Necromancer", "id": "1622-4a14-5cb8-4cac", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Sigilist", "id": "49f1-b367-9ea6-10b8", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Soothsayer", "id": "4ebb-d6e2-fb24-f65e", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Summoner", "id": "7f4c-5614-9dbe-5398", "hidden": false, "import": true, "type": "upgrade"},
+          {"name": "Thaumaturge", "id": "8484-471a-ec04-0826", "hidden": false, "import": true, "type": "upgrade"}
+        ]
       },
       {
         "name": "Spells",
         "id": "44bb-ed77-f0d4-e529",
+        "collapsible": true,
         "hidden": false,
         "entryLinks": [
           {"name": "Witch Spells", "id": "53a5-0698-e92f-9ed1", "hidden": false, "import": true, "targetId": "73ee-9411-f6e4-39bc", "type": "selectionEntryGroup"},
@@ -473,6 +1764,7 @@
       {
         "name": "Witch Spells",
         "id": "73ee-9411-f6e4-39bc",
+        "collapsible": true,
         "hidden": false,
         "constraints": [{"id": "aaa1-36c8-91e7-77ee", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 0}],
         "modifiers": [
@@ -514,6 +1806,98 @@
                 ]
               }
             ]
+          },
+          {
+            "field": "aaa1-36c8-91e7-77ee",
+            "type": "set",
+            "value": 1,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "b1d0-ff36-b47b-f18a",
+                    "childName": "Enchanter",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "1622-4a14-5cb8-4cac",
+                    "childName": "Necromancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7f4c-5614-9dbe-5398",
+                    "childName": "Summoner",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "81dc-342f-c6c4-ece6",
+                    "childName": "Chronomancer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "b3e9-4955-6fe5-aecf",
+                    "childName": "Elementalist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "06e5-e242-4624-09eb",
+                    "childName": "Illusionist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "49f1-b367-9ea6-10b8",
+                    "childName": "Sigilist",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  },
+                  {
+                    "childId": "8484-471a-ec04-0826",
+                    "childName": "Thaumaturge",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
           }
         ],
         "selectionEntries": [
@@ -523,13 +1907,78 @@
             "hidden": false,
             "import": true,
             "type": "upgrade",
+            "constraints": [{"id": "fe6c-fb0d-506f-1328", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
             "infoLinks": [{"name": "Animal Companion", "id": "eed4-5f5e-4078-bf21", "hidden": false, "targetId": "32d0-fde5-f726-f55a", "type": "profile"}]
+          },
+          {
+            "name": "Brew Potion",
+            "id": "cce7-173c-1335-e24d",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "8b2e-3d17-d3c5-9444", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "infoLinks": [{"name": "Brew Potion", "id": "6b56-1456-0d70-9ade", "hidden": false, "targetId": "12ed-f306-c1eb-b29b", "type": "profile"}]
+          },
+          {
+            "name": "Control Animal",
+            "id": "41fa-10fd-40dc-6ccf",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "b33a-a978-2e24-41f2", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "infoLinks": [{"name": "Control Animal", "id": "55cb-f4c0-1abf-2edb", "hidden": false, "targetId": "d639-5cc9-cbda-34d4", "type": "profile"}]
+          },
+          {
+            "name": "Curse",
+            "id": "634a-b1be-202d-87af",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "86b9-a134-546d-7558", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "infoLinks": [{"name": "Curse", "id": "8181-3137-9ed4-35fd", "hidden": false, "targetId": "3d43-aa05-4079-eb95", "type": "profile"}]
+          },
+          {
+            "name": "Familiar",
+            "id": "f191-324b-5886-4d35",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "0ff0-7501-5781-a216", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "infoLinks": [{"name": "Familiar", "id": "1d97-ba1b-57ba-eb7d", "hidden": false, "targetId": "3289-0d59-6452-1504", "type": "profile"}]
+          },
+          {
+            "name": "Fog",
+            "id": "071f-7db3-cb87-19a9",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "cd3f-4396-f54f-d94f", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "infoLinks": [{"name": "Fog", "id": "93aa-8d03-9e88-a353", "hidden": false, "targetId": "c8a2-668b-6078-0862", "type": "profile"}]
+          },
+          {
+            "name": "Poison Dart",
+            "id": "ccbe-1fdd-3e85-4acd",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "9e9a-f16a-008a-4cc9", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "infoLinks": [{"name": "Poison Dart", "id": "1099-32e4-802c-4fbe", "hidden": false, "targetId": "3dec-29b1-5041-2e10", "type": "profile"}]
+          },
+          {
+            "name": "Mud",
+            "id": "0ee7-5fc1-4d11-ca18",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "052b-8f4c-25f6-ccca", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "infoLinks": [{"name": "Mud", "id": "45e5-2d19-3425-220c", "hidden": false, "targetId": "79e5-a7d7-0781-45ca", "type": "profile"}]
           }
         ]
       },
       {
         "name": "Summoner Spells",
         "id": "dd3e-3703-c0fb-0d89",
+        "collapsible": true,
         "hidden": false,
         "modifiers": [
           {
@@ -562,6 +2011,7 @@
             "hidden": false,
             "import": true,
             "type": "upgrade",
+            "constraints": [{"id": "b650-7e71-a1aa-236b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
             "infoLinks": [{"name": "Imp", "id": "75d7-8f60-2e3c-fd72", "hidden": false, "targetId": "5010-c524-5307-49e4", "type": "profile"}]
           }
         ]
