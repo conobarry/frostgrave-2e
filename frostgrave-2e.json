@@ -12,7 +12,7 @@
       {"name": "Apprentice", "id": "8fff-2d5e-cbae-f80c", "hidden": false},
       {"name": "Spellbook", "id": "e4b2-00a6-096d-f592", "hidden": false}
     ],
-    "costTypes": [{"name": "gc", "id": "8af7-6c9e-2277-7dc1", "defaultCostLimit": 400}, {"name": "Slots", "id": "002c-4fdb-9046-f296", "defaultCostLimit": -1, "hidden": false}],
+    "costTypes": [{"name": "gc", "id": "8af7-6c9e-2277-7dc1", "defaultCostLimit": 400}, {"name": "Slots", "id": "002c-4fdb-9046-f296", "defaultCostLimit": -1, "hidden": true}],
     "entryLinks": [
       {"name": "Archer", "id": "58da-c008-2132-03b1", "hidden": false, "import": true, "targetId": "5278-f869-3f7f-d1f8", "type": "selectionEntry"},
       {"name": "Thief", "id": "5b26-290e-afc7-79ee", "hidden": false, "import": true, "targetId": "d5dd-ae5a-347b-a0b3", "type": "selectionEntry"},
@@ -278,7 +278,7 @@
         "typeName": "Spell",
         "characteristics": [
           {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
-          {"name": "Casting Number", "$text": "10/12", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Casting Number", "$text": "10 / 12", "typeId": "58ac-2774-9f17-eabf"},
           {"name": "Category", "$text": "Out of Game (B)", "typeId": "8812-f09a-8aef-84dc"},
           {
             "name": "Description",
@@ -1810,7 +1810,7 @@
             "import": true,
             "targetId": "7a5e-6033-eeee-3f2c",
             "type": "selectionEntryGroup",
-            "constraints": [{"id": "7f4a-0afe-6402-9b8d", "field": "002c-4fdb-9046-f296", "scope": "parent", "shared": true, "type": "max", "value": 4}]
+            "constraints": [{"id": "7f4a-0afe-6402-9b8d", "field": "limit::002c-4fdb-9046-f296", "scope": "parent", "shared": true, "type": "max", "value": 4}]
           }
         ],
         "infoLinks": [{"name": "Apprentice", "id": "0d4f-64b9-f1ae-22a0", "hidden": false, "targetId": "72ef-6247-c921-dc63", "type": "profile"}]
@@ -1898,28 +1898,6 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
-              }
-            ]
-          },
-          {
-            "field": "hidden",
-            "type": "set",
-            "value": true,
-            "conditionGroups": [
-              {
-                "type": "or",
-                "conditions": [
-                  {
-                    "childId": "fffb-c3c3-7fbd-4092",
-                    "childName": "Witch",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "scope": "force",
-                    "shared": true,
-                    "type": "lessThan",
-                    "value": 1
-                  }
-                ]
               }
             ]
           },
@@ -2096,30 +2074,6 @@
         "id": "dd3e-3703-c0fb-0d89",
         "collapsible": true,
         "hidden": false,
-        "modifiers": [
-          {
-            "field": "hidden",
-            "type": "set",
-            "value": true,
-            "conditionGroups": [
-              {
-                "type": "or",
-                "conditions": [
-                  {
-                    "childId": "fffb-c3c3-7fbd-4092",
-                    "childName": "Witch",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "scope": "force",
-                    "shared": true,
-                    "type": "lessThan",
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          }
-        ],
         "selectionEntries": [
           {
             "name": "Imp",
