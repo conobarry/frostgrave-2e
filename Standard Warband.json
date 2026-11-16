@@ -8,7 +8,10 @@
     "library": false,
     "revision": 1,
     "type": "catalogue",
-    "catalogueLinks": [{"name": "Sellsword", "id": "49c5-a2f3-1a00-93ae", "importRootEntries": true, "targetId": "bf36-ab70-4e59-f5c7", "type": "catalogue"}],
+    "catalogueLinks": [
+      {"name": "Sellsword", "id": "49c5-a2f3-1a00-93ae", "importRootEntries": true, "targetId": "bf36-ab70-4e59-f5c7", "type": "catalogue"},
+      {"name": "Campaign", "id": "460a-c8a8-78bd-65fc", "targetId": "1417-89c4-f679-60d8", "type": "catalogue"}
+    ],
     "forceEntries": [
       {
         "name": "Warband",

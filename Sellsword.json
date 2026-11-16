@@ -45,6 +45,75 @@
           {"name": "Effect", "$text": "+3 Fight for one atatck", "typeId": "e708-8a98-c786-d94d"},
           {"name": "When to Declare", "$text": "Before the rolls are made", "typeId": "8bb4-05b2-0fba-6dc3"}
         ]
+      },
+      {
+        "name": "Sprint",
+        "id": "18ac-7856-128e-93b2",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {"name": "Effect", "$text": "+2 Move for the rest of the turn", "typeId": "e708-8a98-c786-d94d"},
+          {"name": "When to Declare", "$text": "Upon activation", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
+      },
+      {
+        "name": "Leadership",
+        "id": "d11f-f01f-851c-42ae",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {
+            "name": "Effect",
+            "$text": "If using a Group Activation, the captain may activate up to three soldiers within 3\" who have not already been activated in the turn",
+            "typeId": "e708-8a98-c786-d94d"
+          },
+          {"name": "When to Declare", "$text": "Upon activation", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
+      },
+      {
+        "name": "Group Activation",
+        "id": "1336-d27e-5bd4-a7ec",
+        "comment": "Captain",
+        "hidden": false,
+        "typeId": "862c-226a-1aca-4ed2",
+        "typeName": "Ability",
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": "Captains activate just like any other soldier with one exception. If the captain is activating in the Solider Phase, he may declare a Group Activation with one other solider within 3\" of him who has not yet been activated in the turn. The captain and this soldier may both move and then both take their second actions.",
+            "typeId": "15c1-2bd7-8969-1787"
+          }
+        ]
+      },
+      {
+        "name": "Survivor",
+        "id": "fc28-4914-a5c4-73f9",
+        "hidden": false,
+        "typeId": "862c-226a-1aca-4ed2",
+        "typeName": "Ability",
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": "If a captain is knocked out of a game (i.e. reduced to 0 Health or less), he rolls on the Survival Table for wizards and apprentices instead of checking for survival as with other soldiers. All results are handled exactly as they are for spellcasters, with one exception.\n\n\nIf a roll on the Permanent Injury Table ever results in the captain suffering a Smashed Jaw, the following effect is applied instead:\n\n\n**Smashed Jaw (Captain)**\nA captain with a Smashed Jaw may not use group activation, even if he has the Leadership trick. A captain can only receive this injury once. Any further Smashed Jaw results must be re-rolled.",
+            "typeId": "15c1-2bd7-8969-1787"
+          }
+        ]
+      },
+      {
+        "name": "Share of the Treasure",
+        "id": "11e8-34fb-cfad-f57f",
+        "hidden": false,
+        "typeId": "862c-226a-1aca-4ed2",
+        "typeName": "Ability",
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": "After each game, the captain takes a percentage equal to the **captain's level +10**, rounded down, of all gold acquired during the game by any means, including the sale of items.\n\n\nA captain does not take a share of magic items unless they are sold or given to him. If a captain is dismissed after a game, he must still be paid his share of gold for the previous game",
+            "typeId": "15c1-2bd7-8969-1787"
+          }
+        ]
       }
     ],
     "sharedSelectionEntries": [
@@ -222,7 +291,10 @@
                 ]
               }
             ]
-          }
+          },
+          {"name": "Group Activation", "id": "a4bd-117f-97a5-2e3b", "hidden": false, "targetId": "1336-d27e-5bd4-a7ec", "type": "profile"},
+          {"name": "Share of the Treasure", "id": "453e-cf30-229d-8dae", "hidden": false, "targetId": "11e8-34fb-cfad-f57f", "type": "profile"},
+          {"name": "Survivor", "id": "9bb8-eb5f-c3d4-4c49", "hidden": false, "targetId": "fc28-4914-a5c4-73f9", "type": "profile"}
         ],
         "selectionEntryGroups": [
           {
@@ -539,9 +611,30 @@
                 "id": "9f26-b2c0-a9d6-376b",
                 "hidden": false,
                 "import": true,
+                "sortIndex": 1,
                 "type": "upgrade",
                 "constraints": [{"id": "e1c4-dc77-8270-249c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "infoLinks": [{"name": "Furious Attack", "id": "586a-2e1f-e691-6843", "hidden": false, "targetId": "cc6a-0cc6-8d6a-6fd5", "type": "profile"}]
+              },
+              {
+                "name": "Sprint",
+                "id": "1b01-4438-6017-3d09",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "upgrade",
+                "constraints": [{"id": "9e37-1bcd-cde9-f958", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Sprint", "id": "94bb-8b69-8262-266c", "hidden": false, "targetId": "18ac-7856-128e-93b2", "type": "profile"}]
+              },
+              {
+                "name": "Leadership",
+                "id": "6dfd-e4d7-9c33-97dd",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 3,
+                "type": "upgrade",
+                "constraints": [{"id": "9966-2c70-ffb3-858d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Leadership", "id": "bcda-f008-7879-340f", "hidden": false, "targetId": "d11f-f01f-851c-42ae", "type": "profile"}]
               }
             ]
           }

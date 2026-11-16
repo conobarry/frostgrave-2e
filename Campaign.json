@@ -1,0 +1,13 @@
+{
+  "catalogue": {
+    "name": "Campaign",
+    "id": "1417-89c4-f679-60d8",
+    "battleScribeVersion": "2.03",
+    "gameSystemId": "sys-ed64-0fdc-503e-b740",
+    "gameSystemRevision": 1,
+    "library": true,
+    "revision": 1,
+    "type": "catalogue",
+    "sharedSelectionEntries": [{"name": "Experience", "id": "06f1-1d52-83c7-2943", "hidden": false, "import": true, "type": "upgrade"}]
+  }
+}
