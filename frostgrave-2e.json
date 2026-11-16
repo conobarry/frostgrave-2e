@@ -11,7 +11,14 @@
       {"name": "Specialist Soldiers", "id": "c622-45fe-1d3d-d1f3", "hidden": false},
       {"name": "Wizard", "id": "6162-1a30-2c5f-5ca6", "hidden": false},
       {"name": "Apprentice", "id": "8fff-2d5e-cbae-f80c", "hidden": false},
-      {"name": "Spellbook", "id": "e4b2-00a6-096d-f592", "hidden": false}
+      {"name": "Spellbook", "id": "e4b2-00a6-096d-f592", "hidden": false},
+      {
+        "name": "Soldier",
+        "id": "ff56-8f5e-46b5-2369",
+        "hidden": true,
+        "constraints": [{"id": "1771-fb97-5c00-01da", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 8}]
+      },
+      {"name": "Animal Companions", "id": "fcc3-18b2-3f6d-0762", "hidden": false}
     ],
     "costTypes": [{"name": "gc", "id": "8af7-6c9e-2277-7dc1", "defaultCostLimit": 400}, {"name": "Slots", "id": "002c-4fdb-9046-f296", "defaultCostLimit": -1, "hidden": true}],
     "entryLinks": [
@@ -20,7 +27,20 @@
       {"name": "Thug", "id": "cbf0-a875-ec87-8420", "hidden": false, "import": true, "targetId": "98d7-4f13-c7ad-7fed", "type": "selectionEntry"},
       {"name": "Wizard", "id": "0d43-b240-5e7e-e554", "hidden": false, "import": true, "targetId": "e22d-8161-dda1-529d", "type": "selectionEntry"},
       {"name": "Apprentice", "id": "9a69-9ffc-2a76-e777", "hidden": false, "import": true, "targetId": "8ce8-8483-653b-9d83", "type": "selectionEntry"},
-      {"name": "Spellbook", "id": "41ea-c1cb-f2c0-7cb2", "hidden": false, "import": true, "targetId": "f819-eb35-37f4-11df", "type": "selectionEntry"}
+      {"name": "Spellbook", "id": "41ea-c1cb-f2c0-7cb2", "hidden": false, "import": true, "targetId": "f819-eb35-37f4-11df", "type": "selectionEntry"},
+      {"name": "Apothecary", "id": "fb37-4c82-bb25-c9fd", "hidden": false, "import": true, "targetId": "d93b-171a-fc1f-6c91", "type": "selectionEntry"},
+      {"name": "Barbarian", "id": "8971-6bdf-1b48-716f", "hidden": false, "import": true, "targetId": "bdad-381c-8d08-001f", "type": "selectionEntry"},
+      {"name": "Crossbowman", "id": "e2d2-352d-69e9-e30a", "hidden": false, "import": true, "targetId": "0ab6-a664-f409-625a", "type": "selectionEntry"},
+      {"name": "Infantryman", "id": "24ed-146b-12ae-63f9", "hidden": false, "import": true, "targetId": "56cf-2a73-8916-2d39", "type": "selectionEntry"},
+      {"name": "Knight", "id": "71a1-c4a7-2156-353a", "hidden": false, "import": true, "targetId": "fa1c-ddb4-730b-4ead", "type": "selectionEntry"},
+      {"name": "Man-at-Arms", "id": "cc5a-2b97-8ef0-d01a", "hidden": false, "import": true, "targetId": "4b7d-c4d4-94b4-ef33", "type": "selectionEntry"},
+      {"name": "Marksman", "id": "3119-8e63-93ff-e1f7", "hidden": false, "import": true, "targetId": "1b9c-ed6d-ee48-9d3e", "type": "selectionEntry"},
+      {"name": "Ranger", "id": "0571-3785-fe85-c8eb", "hidden": false, "import": true, "targetId": "2c6e-0acc-6c7c-4383", "type": "selectionEntry"},
+      {"name": "Templar", "id": "bf8f-e863-d0d3-5dfc", "hidden": false, "import": true, "targetId": "191e-ce2a-3b72-9999", "type": "selectionEntry"},
+      {"name": "Tracker", "id": "952c-e4e5-a558-316b", "hidden": false, "import": true, "targetId": "c76f-2f51-ba3d-760f", "type": "selectionEntry"},
+      {"name": "Treasure Hunter", "id": "f4db-c824-8d5a-4beb", "hidden": false, "import": true, "targetId": "a1aa-70fe-1d47-365d", "type": "selectionEntry"},
+      {"name": "War Hound", "id": "3c66-4329-18b6-85ac", "hidden": false, "import": true, "targetId": "c1e9-9c36-cde3-5e66", "type": "selectionEntry"},
+      {"name": "Bear", "id": "c13e-371b-bfa4-9f30", "hidden": false, "import": true, "targetId": "5f92-2573-6362-0143", "type": "selectionEntry"}
     ],
     "forceEntries": [
       {
@@ -100,7 +120,8 @@
               }
             ]
           },
-          {"name": "Standard Soldiers", "id": "ccc1-1c7a-4b57-b075", "hidden": false, "targetId": "f895-2e12-3952-75b8"}
+          {"name": "Standard Soldiers", "id": "ccc1-1c7a-4b57-b075", "hidden": false, "targetId": "f895-2e12-3952-75b8"},
+          {"name": "Animal Companions", "id": "320a-8960-957e-8897", "hidden": false, "targetId": "fcc3-18b2-3f6d-0762"}
         ]
       }
     ],
@@ -116,7 +137,8 @@
           {"name": "S", "id": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "id": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "id": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "id": "25d8-276c-5e4e-565a"}
+          {"name": "H", "id": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "id": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -179,7 +201,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "-1", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -220,7 +243,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+0", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -237,7 +261,8 @@
           {"name": "S", "$text": "+2", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "11", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+0", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -272,7 +297,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+4", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "14", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "14", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -289,7 +315,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+2", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1719,7 +1746,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "-2", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "8", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "8", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "Animal", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1736,7 +1764,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "11", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+0", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1753,7 +1782,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "12", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+1", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1770,7 +1800,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+3", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1787,7 +1818,8 @@
           {"name": "S", "$text": "+2", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "11", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+0", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1804,7 +1836,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "11", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+2", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1821,7 +1854,8 @@
           {"name": "S", "$text": "+2", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "11", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+1", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1838,7 +1872,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "13", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+1", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1855,7 +1890,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "12", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+1", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1872,7 +1908,8 @@
           {"name": "S", "$text": "+2", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "11", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+2", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1889,7 +1926,8 @@
           {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+3", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "14", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "14", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1906,7 +1944,8 @@
           {"name": "S", "$text": "+2", "typeId": "5ad6-ff62-d51a-99ff"},
           {"name": "A", "$text": "12", "typeId": "cbca-7c83-8b5b-88a5"},
           {"name": "W", "$text": "+1", "typeId": "4315-b0cf-3d0c-06da"},
-          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"}
+          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
         ]
       },
       {
@@ -1960,7 +1999,38 @@
             "typeId": "2846-903c-eed1-adee"
           }
         ]
+      },
+      {
+        "name": "Bear",
+        "id": "ab60-c09d-7bf7-5025",
+        "hidden": false,
+        "typeId": "79ed-bd4a-1464-5726",
+        "typeName": "Figure",
+        "characteristics": [
+          {"name": "M", "$text": "6", "typeId": "8610-5362-9799-a895"},
+          {"name": "F", "$text": "+4", "typeId": "dfba-f345-52aa-b3ce"},
+          {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
+          {"name": "A", "$text": "12", "typeId": "cbca-7c83-8b5b-88a5"},
+          {"name": "W", "$text": "+0", "typeId": "4315-b0cf-3d0c-06da"},
+          {"name": "H", "$text": "14", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "Animal, Large, Strong", "typeId": "bae0-aabe-f933-1045"}
+        ]
       }
+    ],
+    "sharedRules": [
+      {
+        "name": "Animal",
+        "id": "a43e-8ad8-a58a-88ca",
+        "description": "A natural creature with less-than-human intelligence. Even if they become a member of a warband, animals cannot pick up treasure tokens and have no item slots.",
+        "hidden": false
+      },
+      {
+        "name": "Large",
+        "id": "2900-d670-a165-b40e",
+        "description": "This huge creature is easier to target with shooting attacks. It suffers from the Large Target modifier (-2) when defending against shooting attacks.",
+        "hidden": false
+      },
+      {"name": "Strong", "id": "4198-0038-7d2f-251c", "description": "This creature does +2 damage.", "hidden": false}
     ],
     "sharedSelectionEntries": [
       {
@@ -1969,7 +2039,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Standard Soldiers", "id": "1e13-aad1-4729-cb94", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"}],
+        "categoryLinks": [
+          {"name": "Standard Soldiers", "id": "1e13-aad1-4729-cb94", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"},
+          {"name": "Soldier", "id": "1bff-64c7-ecee-47cb", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "infoLinks": [
           {"name": "Thug", "id": "a107-17c0-2177-f522", "hidden": false, "targetId": "da71-db93-3e45-ba68", "type": "profile"},
           {"name": "Hand Weapon", "id": "7732-9443-6329-b44b", "hidden": false, "targetId": "86fa-403e-d2f1-33c1", "type": "profile"}
@@ -1981,7 +2054,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Standard Soldiers", "id": "b6cd-da21-4175-6e84", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"}],
+        "categoryLinks": [
+          {"name": "Standard Soldiers", "id": "b6cd-da21-4175-6e84", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"},
+          {"name": "Soldier", "id": "fd8d-840b-4716-9dea", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "infoLinks": [
           {"name": "Dagger", "id": "6aee-0bc8-dd43-11a8", "hidden": false, "targetId": "6744-d3a4-60c1-5944", "type": "profile"},
           {"name": "Thief", "id": "6cdb-ce86-6e46-9fd4", "hidden": false, "targetId": "104b-7562-aa06-862b", "type": "profile"}
@@ -1993,7 +2069,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Specialist Soldiers", "id": "9122-e600-1049-cd95", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"}],
+        "categoryLinks": [
+          {"name": "Specialist Soldiers", "id": "9122-e600-1049-cd95", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"},
+          {"name": "Soldier", "id": "4dcd-2d2e-3884-fc23", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 75}],
         "infoLinks": [
           {"name": "Archer", "id": "e21a-3669-4624-e3c5", "hidden": false, "targetId": "5a6c-85ca-64d2-269d", "type": "profile"},
@@ -2153,11 +2232,15 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Standard Soldiers", "id": "5320-c9cc-4f58-7108", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"}],
+        "categoryLinks": [
+          {"name": "Standard Soldiers", "id": "5320-c9cc-4f58-7108", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"},
+          {"name": "Soldier", "id": "779d-3345-4702-7b43", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 10}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "War Hound", "id": "af6c-2f9c-806b-2502", "hidden": false, "targetId": "d898-b22b-a09d-32f6", "type": "profile"},
-          {"name": "War Hounds", "id": "42c9-fb72-295b-f3a4", "hidden": false, "targetId": "b5b7-635a-5d34-fd71", "type": "profile"}
+          {"name": "War Hounds", "id": "42c9-fb72-295b-f3a4", "hidden": false, "targetId": "b5b7-635a-5d34-fd71", "type": "profile"},
+          {"name": "Animal", "id": "b3e3-c147-4f40-6c24", "hidden": false, "targetId": "a43e-8ad8-a58a-88ca", "type": "rule"}
         ]
       },
       {
@@ -2166,7 +2249,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Standard Soldiers", "id": "3f6e-ae23-23fb-cae2", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"}],
+        "categoryLinks": [
+          {"name": "Standard Soldiers", "id": "3f6e-ae23-23fb-cae2", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"},
+          {"name": "Soldier", "id": "dbb0-8114-2d7c-48d4", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 50}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Infantryman", "id": "2f4b-f9bb-a780-c752", "hidden": false, "targetId": "0e2b-ec43-508c-a4ef", "type": "profile"},
@@ -2180,7 +2266,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Standard Soldiers", "id": "61e4-fd30-240f-71da", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"}],
+        "categoryLinks": [
+          {"name": "Standard Soldiers", "id": "61e4-fd30-240f-71da", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"},
+          {"name": "Soldier", "id": "abfa-0f2f-3059-a2fb", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 75}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Man-at-Arms", "id": "723a-f443-981a-45ef", "hidden": false, "targetId": "ae1f-9960-beae-e5c7", "type": "profile"},
@@ -2195,7 +2284,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Standard Soldiers", "id": "13f2-70cd-26a2-809a", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"}],
+        "categoryLinks": [
+          {"name": "Standard Soldiers", "id": "13f2-70cd-26a2-809a", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"},
+          {"name": "Soldier", "id": "27f8-f9a7-cdc9-053c", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 75}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Apothecary", "id": "6b0a-4989-f617-c8c6", "hidden": false, "targetId": "4290-4dd8-0ed4-1332", "type": "profile"},
@@ -2210,7 +2302,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Specialist Soldiers", "id": "1851-b38c-952c-f458", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"}],
+        "categoryLinks": [
+          {"name": "Specialist Soldiers", "id": "1851-b38c-952c-f458", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"},
+          {"name": "Soldier", "id": "b8d8-38c0-843e-2ab8", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 75}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Crossbowman", "id": "64f7-f43b-0500-cf1f", "hidden": false, "targetId": "fb5e-4c53-6291-655b", "type": "profile"},
@@ -2226,7 +2321,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Specialist Soldiers", "id": "d659-2aa5-e1d0-cdca", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"}],
+        "categoryLinks": [
+          {"name": "Specialist Soldiers", "id": "d659-2aa5-e1d0-cdca", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"},
+          {"name": "Soldier", "id": "e4ae-8025-6d24-eaf1", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 100}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Treasure Hunter", "id": "b9ee-ab20-8c95-8e4f", "hidden": false, "targetId": "8a47-da96-2b9a-d1e3", "type": "profile"},
@@ -2241,7 +2339,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Specialist Soldiers", "id": "19c2-0b0a-2f12-deab", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"}],
+        "categoryLinks": [
+          {"name": "Specialist Soldiers", "id": "19c2-0b0a-2f12-deab", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"},
+          {"name": "Soldier", "id": "218c-5477-de7e-e94a", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 100}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Tracker", "id": "90c0-8297-6fe0-a055", "hidden": false, "targetId": "91bc-e0b5-c3ea-bb1e", "type": "profile"},
@@ -2257,7 +2358,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Specialist Soldiers", "id": "c24a-ae64-36dd-7547", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"}],
+        "categoryLinks": [
+          {"name": "Specialist Soldiers", "id": "c24a-ae64-36dd-7547", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"},
+          {"name": "Soldier", "id": "8e09-6729-97bf-96db", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 125}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Knight", "id": "54c7-f48d-972a-cfc7", "hidden": false, "targetId": "885e-8113-9ff8-80c0", "type": "profile"},
@@ -2273,7 +2377,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Specialist Soldiers", "id": "ea03-60a3-586c-c00f", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"}],
+        "categoryLinks": [
+          {"name": "Specialist Soldiers", "id": "ea03-60a3-586c-c00f", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"},
+          {"name": "Soldier", "id": "ac1d-600d-48d0-1099", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 125}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Templar", "id": "9461-9cfc-b47e-5e8f", "hidden": false, "targetId": "663a-6f39-a8da-0564", "type": "profile"},
@@ -2287,7 +2394,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Specialist Soldiers", "id": "4181-775c-6fa6-931f", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"}],
+        "categoryLinks": [
+          {"name": "Specialist Soldiers", "id": "4181-775c-6fa6-931f", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"},
+          {"name": "Soldier", "id": "f8b4-6914-991d-29d3", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 125}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Ranger", "id": "7613-a0e9-7864-f174", "hidden": false, "targetId": "54df-e487-0713-d654", "type": "profile"},
@@ -2303,7 +2413,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Specialist Soldiers", "id": "0794-5d0d-45cf-bd64", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"}],
+        "categoryLinks": [
+          {"name": "Specialist Soldiers", "id": "0794-5d0d-45cf-bd64", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"},
+          {"name": "Soldier", "id": "5bbd-6b19-a180-b163", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 125}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Barbarian", "id": "eee1-2d2b-9351-2453", "hidden": false, "targetId": "304d-8de5-9779-d0a7", "type": "profile"},
@@ -2317,7 +2430,10 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Specialist Soldiers", "id": "f577-db38-2bb4-c6d8", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"}],
+        "categoryLinks": [
+          {"name": "Specialist Soldiers", "id": "f577-db38-2bb4-c6d8", "hidden": false, "primary": true, "targetId": "c622-45fe-1d3d-d1f3"},
+          {"name": "Soldier", "id": "af5e-d2e1-66a8-07a4", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"}
+        ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 125}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
         "infoLinks": [
           {"name": "Marksman", "id": "28f4-a75c-7a7d-978a", "hidden": false, "targetId": "5779-b8d6-b674-af5d", "type": "profile"},
@@ -2326,6 +2442,52 @@
           {"name": "Dagger", "id": "d7d3-966d-d6f1-50d6", "hidden": false, "targetId": "6744-d3a4-60c1-5944", "type": "profile"},
           {"name": "Hand Weapon", "id": "d1d3-ca2a-1310-f670", "hidden": false, "targetId": "86fa-403e-d2f1-33c1", "type": "profile"},
           {"name": "Heavy Armour", "id": "6832-f8f3-2e74-4334", "hidden": false, "targetId": "3512-9e37-26b0-f401", "type": "profile"}
+        ]
+      },
+      {
+        "name": "Bear",
+        "id": "5f92-2573-6362-0143",
+        "comment": "Animal Companion",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Animal Companions", "id": "9b24-f1ae-85bf-e1e1", "hidden": false, "primary": true, "targetId": "fcc3-18b2-3f6d-0762"},
+          {"name": "Soldier", "id": "5428-3786-1f39-fbf6", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"},
+          {"name": "Standard Soldiers", "id": "1c61-c8e4-870e-1296", "hidden": false, "primary": false, "targetId": "f895-2e12-3952-75b8"}
+        ],
+        "constraints": [{"id": "e1e7-1e11-db32-c068", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 2}],
+        "infoLinks": [
+          {
+            "name": "Bear",
+            "id": "aa25-8de8-1544-d23e",
+            "hidden": false,
+            "targetId": "ab60-c09d-7bf7-5025",
+            "type": "profile",
+            "modifiers": [{"field": "4315-b0cf-3d0c-06da", "type": "increment", "value": 3}]
+          },
+          {"name": "Animal", "id": "1e88-dcbe-132c-effc", "hidden": false, "targetId": "a43e-8ad8-a58a-88ca", "type": "rule"},
+          {"name": "Large", "id": "a2d1-93eb-dfa5-8f6b", "hidden": false, "targetId": "2900-d670-a165-b40e", "type": "rule"},
+          {"name": "Strong", "id": "53bf-ec96-6bd5-9079", "hidden": false, "targetId": "4198-0038-7d2f-251c", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "ac99-1dc6-8e7d-f7df",
+                "childName": "Animal Companion",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
+              }
+            ]
+          }
         ]
       }
     ],
