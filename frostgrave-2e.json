@@ -440,7 +440,7 @@
         "typeName": "Spell",
         "characteristics": [
           {"name": "School", "$text": "Summoner", "typeId": "a306-e756-4210-68eb"},
-          {"name": "Casting Number", "$text": "10", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Casting Number", "$text": "10 / 12", "typeId": "58ac-2774-9f17-eabf"},
           {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
           {
             "name": "Description",
@@ -494,7 +494,7 @@
         "typeName": "Spell",
         "characteristics": [
           {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
-          {"name": "Casting Number", "$text": "12", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Casting Number", "$text": "12 / 14", "typeId": "58ac-2774-9f17-eabf"},
           {"name": "Category", "$text": "Out of Game (B)", "typeId": "8812-f09a-8aef-84dc"},
           {
             "name": "Description",
@@ -656,7 +656,7 @@
         "typeName": "Spell",
         "characteristics": [
           {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
-          {"name": "Casting Number", "$text": "12", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Casting Number", "$text": "12 / 14", "typeId": "58ac-2774-9f17-eabf"},
           {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
           {
             "name": "Description",
@@ -818,7 +818,7 @@
         "typeName": "Spell",
         "characteristics": [
           {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
-          {"name": "Casting Number", "$text": "8", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Casting Number", "$text": "8 / 10", "typeId": "58ac-2774-9f17-eabf"},
           {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
           {
             "name": "Description",
@@ -980,7 +980,7 @@
         "typeName": "Spell",
         "characteristics": [
           {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
-          {"name": "Casting Number", "$text": "10", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Casting Number", "$text": "10 / 12", "typeId": "58ac-2774-9f17-eabf"},
           {"name": "Category", "$text": "Out of Game (B)", "typeId": "8812-f09a-8aef-84dc"},
           {
             "name": "Description",
@@ -1142,7 +1142,7 @@
         "typeName": "Spell",
         "characteristics": [
           {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
-          {"name": "Casting Number", "$text": "8", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Casting Number", "$text": "8 / 10", "typeId": "58ac-2774-9f17-eabf"},
           {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
           {
             "name": "Description",
@@ -1304,7 +1304,7 @@
         "typeName": "Spell",
         "characteristics": [
           {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
-          {"name": "Casting Number", "$text": "10", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Casting Number", "$text": "10 / 12", "typeId": "58ac-2774-9f17-eabf"},
           {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
           {"name": "Description", "$text": "All ground within 3” of a target point becomes rough ground.", "typeId": "3908-0411-0ad8-8f19"}
         ],
@@ -1462,7 +1462,7 @@
         "typeName": "Spell",
         "characteristics": [
           {"name": "School", "$text": "Witch", "typeId": "a306-e756-4210-68eb"},
-          {"name": "Casting Number", "$text": "10", "typeId": "58ac-2774-9f17-eabf"},
+          {"name": "Casting Number", "$text": "10 / 12", "typeId": "58ac-2774-9f17-eabf"},
           {"name": "Category", "$text": "Line of Sight", "typeId": "8812-f09a-8aef-84dc"},
           {
             "name": "Description",
@@ -1810,7 +1810,7 @@
             "import": true,
             "targetId": "7a5e-6033-eeee-3f2c",
             "type": "selectionEntryGroup",
-            "constraints": [{"id": "7f4a-0afe-6402-9b8d", "field": "limit::002c-4fdb-9046-f296", "scope": "parent", "shared": true, "type": "max", "value": 4}]
+            "constraints": [{"id": "7f4a-0afe-6402-9b8d", "field": "002c-4fdb-9046-f296", "scope": "parent", "shared": true, "type": "max", "value": 4}]
           }
         ],
         "infoLinks": [{"name": "Apprentice", "id": "0d4f-64b9-f1ae-22a0", "hidden": false, "targetId": "72ef-6247-c921-dc63", "type": "profile"}]
