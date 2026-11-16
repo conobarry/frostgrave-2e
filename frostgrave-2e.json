@@ -1,0 +1,28 @@
+{
+  "gameSystem": {
+    "name": "frostgrave-2e",
+    "id": "sys-ed64-0fdc-503e-b740",
+    "battleScribeVersion": "2.03",
+    "revision": 1,
+    "type": "gameSystem",
+    "categoryEntries": [{"name": "Default Category", "id": "default-category"}],
+    "forceEntries": [
+      {
+        "name": "Default Force",
+        "id": "default-force",
+        "hidden": false,
+        "categoryLinks": [{"name": "Default Category", "id": "default-force-category-link", "hidden": false, "targetId": "default-category"}]
+      }
+    ],
+    "selectionEntries": [
+      {
+        "name": "Default Root Entry",
+        "id": "default-entry",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Default Category", "id": "default-category-link", "hidden": false, "primary": true, "targetId": "default-category"}]
+      }
+    ]
+  }
+}
