@@ -3,10 +3,11 @@
     "name": "Frostgrave 2nd Edition",
     "id": "sys-ed64-0fdc-503e-b740",
     "battleScribeVersion": "2.03",
+    "publicationId": "aa94-68df-16ee-0a61",
     "revision": 1,
     "type": "gameSystem",
     "categoryEntries": [
-      {"name": "Standard Soldiers", "id": "default-category"},
+      {"name": "Standard Soldiers", "id": "f895-2e12-3952-75b8"},
       {"name": "Specialist Soldiers", "id": "c622-45fe-1d3d-d1f3", "hidden": false},
       {"name": "Wizard", "id": "6162-1a30-2c5f-5ca6", "hidden": false},
       {"name": "Apprentice", "id": "8fff-2d5e-cbae-f80c", "hidden": false},
@@ -24,7 +25,7 @@
     "forceEntries": [
       {
         "name": "Warband",
-        "id": "default-force",
+        "id": "646f-e9ee-2d84-0cc6",
         "hidden": false,
         "categoryLinks": [
           {
@@ -81,7 +82,7 @@
               }
             ]
           },
-          {"name": "Standard Soldiers", "id": "default-force-category-link", "hidden": false, "targetId": "default-category"},
+          {"name": "Standard Soldiers", "id": "ccc1-1c7a-4b57-b075", "hidden": false, "targetId": "f895-2e12-3952-75b8"},
           {
             "name": "Specialist Soldiers",
             "id": "8309-7d2a-06a8-6c5a",
@@ -149,6 +150,7 @@
         ]
       }
     ],
+    "publications": [{"name": "Frostgrave Second Edition", "id": "aa94-68df-16ee-0a61", "hidden": false, "publicationDate": "2020"}],
     "sharedProfiles": [
       {
         "name": "Thug",
@@ -1690,7 +1692,7 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Standard Soldiers", "id": "d031-ea84-0af3-1a5a", "hidden": false, "primary": true, "targetId": "default-category"}],
+        "categoryLinks": [{"name": "Standard Soldiers", "id": "1e13-aad1-4729-cb94", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"}],
         "infoLinks": [
           {"name": "Thug", "id": "a107-17c0-2177-f522", "hidden": false, "targetId": "da71-db93-3e45-ba68", "type": "profile"},
           {"name": "Hand Weapon", "id": "7732-9443-6329-b44b", "hidden": false, "targetId": "86fa-403e-d2f1-33c1", "type": "profile"}
@@ -1702,7 +1704,7 @@
         "hidden": false,
         "import": true,
         "type": "model",
-        "categoryLinks": [{"name": "Standard Soldiers", "id": "5ea2-7a83-e85f-50f1", "hidden": false, "primary": true, "targetId": "default-category"}],
+        "categoryLinks": [{"name": "Standard Soldiers", "id": "b6cd-da21-4175-6e84", "hidden": false, "primary": true, "targetId": "f895-2e12-3952-75b8"}],
         "infoLinks": [
           {"name": "Dagger", "id": "6aee-0bc8-dd43-11a8", "hidden": false, "targetId": "6744-d3a4-60c1-5944", "type": "profile"},
           {"name": "Thief", "id": "6cdb-ce86-6e46-9fd4", "hidden": false, "targetId": "104b-7562-aa06-862b", "type": "profile"}

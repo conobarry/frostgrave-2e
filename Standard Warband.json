@@ -1,0 +1,12 @@
+{
+  "catalogue": {
+    "name": "Standard Warband",
+    "id": "81f3-7435-a992-b373",
+    "battleScribeVersion": "2.03",
+    "gameSystemId": "sys-ed64-0fdc-503e-b740",
+    "gameSystemRevision": 1,
+    "library": false,
+    "revision": 1,
+    "type": "catalogue"
+  }
+}
