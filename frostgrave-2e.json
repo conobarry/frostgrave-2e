@@ -152,9 +152,9 @@
         "typeId": "2d1e-cd02-79e0-851c",
         "typeName": "Weapon",
         "characteristics": [
-          {"name": "Damage Modifier", "$text": "", "typeId": "31d0-db21-9ef7-6d03"},
-          {"name": "Maximum Range", "$text": "", "typeId": "5b03-a022-3c5f-bbd3"},
-          {"name": "Notes", "$text": "", "typeId": "c52e-b236-75ed-b5f0"}
+          {"name": "Damage Modifier", "$text": "-", "typeId": "31d0-db21-9ef7-6d03"},
+          {"name": "Maximum Range", "$text": "-", "typeId": "5b03-a022-3c5f-bbd3"},
+          {"name": "Notes", "$text": "-", "typeId": "c52e-b236-75ed-b5f0"}
         ]
       },
       {
@@ -165,7 +165,7 @@
         "typeName": "Weapon",
         "characteristics": [
           {"name": "Damage Modifier", "$text": "-1", "typeId": "31d0-db21-9ef7-6d03"},
-          {"name": "Maximum Range", "$text": "", "typeId": "5b03-a022-3c5f-bbd3"},
+          {"name": "Maximum Range", "$text": "-", "typeId": "5b03-a022-3c5f-bbd3"},
           {"name": "Notes", "$text": "First dagger does not take up an item slot", "typeId": "c52e-b236-75ed-b5f0"}
         ]
       },
@@ -206,7 +206,7 @@
         "typeId": "2d1e-cd02-79e0-851c",
         "typeName": "Weapon",
         "characteristics": [
-          {"name": "Damage Modifier", "$text": "", "typeId": "31d0-db21-9ef7-6d03"},
+          {"name": "Damage Modifier", "$text": "-", "typeId": "31d0-db21-9ef7-6d03"},
           {"name": "Maximum Range", "$text": "24\"", "typeId": "5b03-a022-3c5f-bbd3"},
           {"name": "Notes", "$text": "Load and fire as single action; must have a quiver", "typeId": "c52e-b236-75ed-b5f0"}
         ]
@@ -217,7 +217,7 @@
         "hidden": false,
         "typeId": "4fa5-487f-7799-5fc3",
         "typeName": "Armour",
-        "characteristics": [{"name": "Armour Modifier", "$text": "+1", "typeId": "1f94-1b56-8c2b-8481"}, {"name": "Notes", "$text": "", "typeId": "c083-6ccd-5453-cd3f"}]
+        "characteristics": [{"name": "Armour Modifier", "$text": "+1", "typeId": "1f94-1b56-8c2b-8481"}, {"name": "Notes", "$text": "-", "typeId": "c083-6ccd-5453-cd3f"}]
       },
       {
         "name": "Wizard",
@@ -293,7 +293,7 @@
                 "childName": "Witch",
                 "field": "selections",
                 "includeChildSelections": true,
-                "scope": "parent",
+                "scope": "force",
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
@@ -411,7 +411,18 @@
                 "field": "name",
                 "type": "set",
                 "value": "Witch",
-                "conditions": [{"childId": "fffb-c3c3-7fbd-4092", "childName": "Witch", "field": "selections", "scope": "parent", "shared": true, "type": "atLeast", "value": 1}]
+                "conditions": [
+                  {
+                    "childId": "fffb-c3c3-7fbd-4092",
+                    "childName": "Witch",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
               }
             ]
           }
@@ -475,7 +486,7 @@
                 "childName": "Witch",
                 "field": "selections",
                 "includeChildSelections": true,
-                "scope": "parent",
+                "scope": "force",
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
@@ -495,7 +506,7 @@
                     "childName": "Witch",
                     "field": "selections",
                     "includeChildSelections": true,
-                    "scope": "parent",
+                    "scope": "force",
                     "shared": true,
                     "type": "lessThan",
                     "value": 1
@@ -534,7 +545,7 @@
                     "childName": "Witch",
                     "field": "selections",
                     "includeChildSelections": true,
-                    "scope": "parent",
+                    "scope": "force",
                     "shared": true,
                     "type": "lessThan",
                     "value": 1
