@@ -9,15 +9,17 @@
       {"name": "Standard Soldiers", "id": "default-category"},
       {"name": "Specialist Soldiers", "id": "c622-45fe-1d3d-d1f3", "hidden": false},
       {"name": "Wizard", "id": "6162-1a30-2c5f-5ca6", "hidden": false},
-      {"name": "Apprentice", "id": "8fff-2d5e-cbae-f80c", "hidden": false}
+      {"name": "Apprentice", "id": "8fff-2d5e-cbae-f80c", "hidden": false},
+      {"name": "Spellbook", "id": "e4b2-00a6-096d-f592", "hidden": false}
     ],
-    "costTypes": [{"name": "gc", "id": "8af7-6c9e-2277-7dc1", "defaultCostLimit": 400}],
+    "costTypes": [{"name": "gc", "id": "8af7-6c9e-2277-7dc1", "defaultCostLimit": 400}, {"name": "Slots", "id": "002c-4fdb-9046-f296", "defaultCostLimit": -1, "hidden": true}],
     "entryLinks": [
       {"name": "Archer", "id": "58da-c008-2132-03b1", "hidden": false, "import": true, "targetId": "5278-f869-3f7f-d1f8", "type": "selectionEntry"},
       {"name": "Thief", "id": "5b26-290e-afc7-79ee", "hidden": false, "import": true, "targetId": "d5dd-ae5a-347b-a0b3", "type": "selectionEntry"},
       {"name": "Thug", "id": "cbf0-a875-ec87-8420", "hidden": false, "import": true, "targetId": "98d7-4f13-c7ad-7fed", "type": "selectionEntry"},
       {"name": "Wizard", "id": "0d43-b240-5e7e-e554", "hidden": false, "import": true, "targetId": "e22d-8161-dda1-529d", "type": "selectionEntry"},
-      {"name": "Apprentice", "id": "9a69-9ffc-2a76-e777", "hidden": false, "import": true, "targetId": "8ce8-8483-653b-9d83", "type": "selectionEntry"}
+      {"name": "Apprentice", "id": "9a69-9ffc-2a76-e777", "hidden": false, "import": true, "targetId": "8ce8-8483-653b-9d83", "type": "selectionEntry"},
+      {"name": "Spellbook", "id": "41ea-c1cb-f2c0-7cb2", "hidden": false, "import": true, "targetId": "f819-eb35-37f4-11df", "type": "selectionEntry"}
     ],
     "forceEntries": [
       {
@@ -25,6 +27,24 @@
         "id": "default-force",
         "hidden": false,
         "categoryLinks": [
+          {
+            "name": "Spellbook",
+            "id": "03b1-49e3-72db-eb2a",
+            "hidden": false,
+            "targetId": "e4b2-00a6-096d-f592",
+            "constraints": [
+              {
+                "id": "7a1e-7f13-6e89-f67b",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ]
+          },
           {
             "name": "Wizard",
             "id": "20e4-c8ec-899d-b729",
@@ -1594,6 +1614,73 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Two-Handed Weapon",
+        "id": "e8c0-7d93-006a-2cf7",
+        "hidden": false,
+        "typeId": "2d1e-cd02-79e0-851c",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Damage Modifier", "$text": "+2", "typeId": "31d0-db21-9ef7-6d03"},
+          {"name": "Maximum Range", "$text": "-", "typeId": "5b03-a022-3c5f-bbd3"},
+          {"name": "Notes", "$text": "Takes up two item slots", "typeId": "c52e-b236-75ed-b5f0"}
+        ]
+      },
+      {
+        "name": "Staff",
+        "id": "8436-097b-861a-27e9",
+        "hidden": false,
+        "typeId": "2d1e-cd02-79e0-851c",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Damage Modifier", "$text": "-1", "typeId": "31d0-db21-9ef7-6d03"},
+          {"name": "Maximum Range", "$text": "", "typeId": "5b03-a022-3c5f-bbd3"},
+          {"name": "Notes", "$text": "-1 damage modifier to opponent in hand-to-hand combat", "typeId": "c52e-b236-75ed-b5f0"}
+        ]
+      },
+      {
+        "name": "Crossbow",
+        "id": "6183-8005-a0ea-1ed5",
+        "hidden": false,
+        "typeId": "2d1e-cd02-79e0-851c",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Damage Modifier", "$text": "+2", "typeId": "31d0-db21-9ef7-6d03"},
+          {"name": "Maximum Range", "$text": "24\"", "typeId": "5b03-a022-3c5f-bbd3"},
+          {"name": "Notes", "$text": "Load and fire as separate actions; may reload in place of movement; must have a quiver", "typeId": "c52e-b236-75ed-b5f0"}
+        ]
+      },
+      {
+        "name": "Unarmed",
+        "id": "5a92-dac1-1a04-4438",
+        "hidden": false,
+        "typeId": "2d1e-cd02-79e0-851c",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Damage Modifier", "$text": "-2", "typeId": "31d0-db21-9ef7-6d03"},
+          {"name": "Maximum Range", "$text": "-", "typeId": "5b03-a022-3c5f-bbd3"},
+          {"name": "Notes", "$text": "-2 Fight", "typeId": "c52e-b236-75ed-b5f0"}
+        ]
+      },
+      {
+        "name": "Shield",
+        "id": "1095-b734-df21-8c99",
+        "hidden": false,
+        "typeId": "4fa5-487f-7799-5fc3",
+        "typeName": "Armour",
+        "characteristics": [
+          {"name": "Armour Modifier", "$text": "+1", "typeId": "1f94-1b56-8c2b-8481"},
+          {"name": "Notes", "$text": "May not be carried with a two-handed weapon or staff", "typeId": "c083-6ccd-5453-cd3f"}
+        ]
+      },
+      {
+        "name": "Heavy Armour",
+        "id": "3512-9e37-26b0-f401",
+        "hidden": false,
+        "typeId": "4fa5-487f-7799-5fc3",
+        "typeName": "Armour",
+        "characteristics": [{"name": "Armour Modifier", "$text": "+2", "typeId": "1f94-1b56-8c2b-8481"}, {"name": "Notes", "$text": "-1 Move", "typeId": "c083-6ccd-5453-cd3f"}]
       }
     ],
     "sharedSelectionEntries": [
@@ -1657,22 +1744,13 @@
         ],
         "entryLinks": [
           {
-            "name": "Wizard Types",
-            "id": "a717-d551-e70d-5ece",
+            "name": "Equipment",
+            "id": "35ac-af05-a7a5-62bc",
             "hidden": false,
             "import": true,
-            "sortIndex": 1,
-            "targetId": "b287-4a99-ff33-6c9c",
-            "type": "selectionEntryGroup"
-          },
-          {
-            "name": "Spells",
-            "id": "d5c6-d397-ad50-d0b7",
-            "hidden": false,
-            "import": true,
-            "sortIndex": 2,
-            "targetId": "44bb-ed77-f0d4-e529",
-            "type": "selectionEntryGroup"
+            "targetId": "7a5e-6033-eeee-3f2c",
+            "type": "selectionEntryGroup",
+            "constraints": [{"id": "6c21-aff5-50ce-198a", "field": "002c-4fdb-9046-f296", "scope": "parent", "shared": true, "type": "max", "value": 5}]
           }
         ],
         "infoLinks": [
@@ -1724,8 +1802,46 @@
           }
         ],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 100}],
-        "entryLinks": [{"name": "Spells", "id": "8435-50c6-a98c-4f9a", "hidden": false, "import": true, "targetId": "44bb-ed77-f0d4-e529", "type": "selectionEntryGroup"}],
+        "entryLinks": [
+          {
+            "name": "Equipment",
+            "id": "5162-22dd-ebe4-ae52",
+            "hidden": false,
+            "import": true,
+            "targetId": "7a5e-6033-eeee-3f2c",
+            "type": "selectionEntryGroup",
+            "constraints": [{"id": "7f4a-0afe-6402-9b8d", "field": "002c-4fdb-9046-f296", "scope": "parent", "shared": true, "type": "max", "value": 4}]
+          }
+        ],
         "infoLinks": [{"name": "Apprentice", "id": "0d4f-64b9-f1ae-22a0", "hidden": false, "targetId": "72ef-6247-c921-dc63", "type": "profile"}]
+      },
+      {
+        "name": "Spellbook",
+        "id": "f819-eb35-37f4-11df",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Spellbook", "id": "4b0d-ca27-fe23-1aee", "hidden": false, "primary": true, "targetId": "e4b2-00a6-096d-f592"}],
+        "entryLinks": [
+          {
+            "name": "Wizard Type",
+            "id": "e80c-97ba-623c-5d3b",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "b287-4a99-ff33-6c9c",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Spells",
+            "id": "96cd-6bf2-7252-87e7",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "44bb-ed77-f0d4-e529",
+            "type": "selectionEntryGroup"
+          }
+        ]
       }
     ],
     "sharedSelectionEntryGroups": [
@@ -2013,6 +2129,197 @@
             "type": "upgrade",
             "constraints": [{"id": "b650-7e71-a1aa-236b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
             "infoLinks": [{"name": "Imp", "id": "75d7-8f60-2e3c-fd72", "hidden": false, "targetId": "5010-c524-5307-49e4", "type": "profile"}]
+          }
+        ]
+      },
+      {
+        "name": "Equipment",
+        "id": "7a5e-6033-eeee-3f2c",
+        "collapsible": true,
+        "hidden": false,
+        "entryLinks": [
+          {
+            "name": "Armour",
+            "id": "2169-7986-5776-b73a",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "5825-cab5-235b-f494",
+            "type": "selectionEntryGroup",
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditionGroups": [
+                  {
+                    "type": "or",
+                    "conditions": [
+                      {"childId": "6162-1a30-2c5f-5ca6", "childName": "Wizard", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1},
+                      {"childId": "8fff-2d5e-cbae-f80c", "childName": "Apprentice", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Weapons",
+            "id": "7688-202b-a8dc-ab03",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "3ed0-fef2-6e3d-81e2",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Items",
+            "id": "51a8-e200-6f02-2dad",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 3,
+            "targetId": "c57d-2fe6-f0c6-337d",
+            "type": "selectionEntryGroup"
+          }
+        ]
+      },
+      {
+        "name": "Armour",
+        "id": "5825-cab5-235b-f494",
+        "collapsible": true,
+        "hidden": false,
+        "selectionEntries": [
+          {
+            "name": "Shield",
+            "id": "0ea5-ec99-dd61-021a",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+            "infoLinks": [{"name": "Shield", "id": "3378-c98f-4151-489f", "hidden": false, "targetId": "1095-b734-df21-8c99", "type": "profile"}]
+          },
+          {
+            "name": "Light Armour",
+            "id": "bd69-58c7-04ac-3780",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+            "infoLinks": [{"name": "Light Armour", "id": "ae1c-31f8-8022-0fd5", "hidden": false, "targetId": "93fb-2683-4918-018c", "type": "profile"}]
+          },
+          {
+            "name": "Heavy Armour",
+            "id": "f8ac-a8e5-d5b4-2c47",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+            "infoLinks": [{"name": "Heavy Armour", "id": "3089-a36a-101d-ad93", "hidden": false, "targetId": "3512-9e37-26b0-f401", "type": "profile"}]
+          }
+        ]
+      },
+      {
+        "name": "Weapons",
+        "id": "3ed0-fef2-6e3d-81e2",
+        "collapsible": true,
+        "hidden": false,
+        "selectionEntries": [
+          {
+            "name": "Dagger",
+            "id": "2896-dd24-c575-5fd7",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}],
+            "infoLinks": [{"name": "Dagger", "id": "8a8b-6e4d-2a9f-2027", "hidden": false, "targetId": "6744-d3a4-60c1-5944", "type": "profile"}],
+            "modifiers": [
+              {
+                "field": "002c-4fdb-9046-f296",
+                "type": "set",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "2896-dd24-c575-5fd7",
+                    "childName": "Dagger",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "model",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hand Weapon",
+            "id": "cb15-da89-d6e7-da0b",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+            "infoLinks": [{"name": "Hand Weapon", "id": "fead-cc01-d9d5-cf2d", "hidden": false, "targetId": "86fa-403e-d2f1-33c1", "type": "profile"}]
+          },
+          {
+            "name": "Two-Handed Weapon",
+            "id": "3cc7-ec6a-8ba2-ff04",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 2}],
+            "infoLinks": [{"name": "Two-Handed Weapon", "id": "dd3f-4486-fa18-1a82", "hidden": false, "targetId": "e8c0-7d93-006a-2cf7", "type": "profile"}]
+          },
+          {
+            "name": "Staff",
+            "id": "3cac-88cd-415a-b80f",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+            "infoLinks": [{"name": "Staff", "id": "844e-c6be-8edc-dd52", "hidden": false, "targetId": "8436-097b-861a-27e9", "type": "profile"}]
+          },
+          {
+            "name": "Bow",
+            "id": "6259-634d-f0c1-793f",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+            "infoLinks": [{"name": "Bow", "id": "3e51-738e-957c-e31d", "hidden": false, "targetId": "3b15-3de2-c008-2b1a", "type": "profile"}]
+          },
+          {
+            "name": "Crossbow",
+            "id": "ab43-9c91-0059-abf0",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+            "infoLinks": [{"name": "Crossbow", "id": "28d6-979e-2353-915f", "hidden": false, "targetId": "6183-8005-a0ea-1ed5", "type": "profile"}]
+          },
+          {
+            "name": "Unarmed",
+            "id": "acc7-5995-b737-0153",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "infoLinks": [{"name": "Unarmed", "id": "a7d2-51d6-20a6-7ec6", "hidden": false, "targetId": "5a92-dac1-1a04-4438", "type": "profile"}]
+          }
+        ]
+      },
+      {
+        "name": "Items",
+        "id": "c57d-2fe6-f0c6-337d",
+        "collapsible": true,
+        "hidden": false,
+        "selectionEntries": [
+          {
+            "name": "Quiver",
+            "id": "48cf-35d2-68d4-7788",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}]
           }
         ]
       }
