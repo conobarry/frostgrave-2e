@@ -7,6 +7,124 @@
     "gameSystemRevision": 1,
     "library": false,
     "revision": 1,
-    "type": "catalogue"
+    "type": "catalogue",
+    "catalogueLinks": [{"name": "Sellsword", "id": "49c5-a2f3-1a00-93ae", "importRootEntries": true, "targetId": "bf36-ab70-4e59-f5c7", "type": "catalogue"}],
+    "forceEntries": [
+      {
+        "name": "Warband",
+        "id": "646f-e9ee-2d84-0cc6",
+        "hidden": false,
+        "categoryLinks": [
+          {"name": "Configuration", "id": "56b5-c312-5a5e-8710", "hidden": false, "targetId": "a7f7-a7e7-379c-aa0f"},
+          {
+            "name": "Spellbook",
+            "id": "03b1-49e3-72db-eb2a",
+            "hidden": false,
+            "targetId": "e4b2-00a6-096d-f592",
+            "constraints": [
+              {
+                "id": "7a1e-7f13-6e89-f67b",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "Wizard",
+            "id": "20e4-c8ec-899d-b729",
+            "hidden": false,
+            "targetId": "6162-1a30-2c5f-5ca6",
+            "constraints": [
+              {
+                "id": "33f8-b54e-e31a-981c",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "Apprentice",
+            "id": "2843-666f-b6ee-a4ab",
+            "hidden": false,
+            "targetId": "8fff-2d5e-cbae-f80c",
+            "constraints": [
+              {
+                "id": "4964-26f1-8cab-2c5f",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "Captain",
+            "id": "ac97-3e85-0d46-6aaf",
+            "hidden": false,
+            "targetId": "2fd6-07af-449e-3116",
+            "constraints": [{"id": "1d87-b5f9-b3f3-99f1", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "7c7f-009e-1472-3976",
+                    "childName": "Sellsword",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Specialist Soldiers",
+            "id": "8309-7d2a-06a8-6c5a",
+            "hidden": false,
+            "targetId": "c622-45fe-1d3d-d1f3",
+            "constraints": [
+              {
+                "id": "81d4-b0db-71f9-4598",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "max",
+                "value": 4
+              }
+            ]
+          },
+          {"name": "Standard Soldiers", "id": "ccc1-1c7a-4b57-b075", "hidden": false, "targetId": "f895-2e12-3952-75b8"},
+          {
+            "name": "Animal Companions",
+            "id": "320a-8960-957e-8897",
+            "hidden": false,
+            "targetId": "fcc3-18b2-3f6d-0762",
+            "constraints": [{"id": "2294-01d4-0d4b-0b34", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 2}]
+          },
+          {"name": "Summoned", "id": "af51-fd4c-16f2-111b", "hidden": false, "targetId": "5569-7377-0462-d49d"}
+        ]
+      }
+    ]
   }
 }

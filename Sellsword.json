@@ -1,0 +1,552 @@
+{
+  "catalogue": {
+    "name": "Sellsword",
+    "id": "bf36-ab70-4e59-f5c7",
+    "battleScribeVersion": "2.03",
+    "gameSystemId": "sys-ed64-0fdc-503e-b740",
+    "gameSystemRevision": 1,
+    "library": true,
+    "revision": 1,
+    "type": "catalogue",
+    "categoryEntries": [{"name": "Captain", "id": "2fd6-07af-449e-3116", "hidden": false}],
+    "entryLinks": [{"name": "Captain", "id": "fb3a-5208-2f9d-a264", "hidden": false, "import": true, "targetId": "4b9b-18ae-def5-e5cd", "type": "selectionEntry"}],
+    "profileTypes": [
+      {
+        "name": "Trick of the Trade",
+        "id": "43c7-a180-0f5f-6927",
+        "hidden": false,
+        "characteristicTypes": [{"name": "Effect", "id": "e708-8a98-c786-d94d"}, {"name": "When to Declare", "id": "8bb4-05b2-0fba-6dc3"}]
+      }
+    ],
+    "sharedProfiles": [
+      {
+        "name": "Captain",
+        "id": "ab3f-2ac8-9201-fee1",
+        "hidden": false,
+        "typeId": "79ed-bd4a-1464-5726",
+        "typeName": "Figure",
+        "characteristics": [
+          {"name": "M", "$text": "6", "typeId": "8610-5362-9799-a895"},
+          {"name": "F", "$text": "+2", "typeId": "dfba-f345-52aa-b3ce"},
+          {"name": "S", "$text": "+1", "typeId": "5ad6-ff62-d51a-99ff"},
+          {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
+          {"name": "W", "$text": "+3", "typeId": "4315-b0cf-3d0c-06da"},
+          {"name": "H", "$text": "12", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "", "typeId": "bae0-aabe-f933-1045"}
+        ]
+      },
+      {
+        "name": "Furious Attack",
+        "id": "cc6a-0cc6-8d6a-6fd5",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {"name": "Effect", "$text": "+3 Fight for one atatck", "typeId": "e708-8a98-c786-d94d"},
+          {"name": "When to Declare", "$text": "Before the rolls are made", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "Captain",
+        "id": "4b9b-18ae-def5-e5cd",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Soldier", "id": "da3f-02cf-f28e-1ffd", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"},
+          {"name": "Captain", "id": "76b8-788c-84e2-34e5", "hidden": false, "primary": true, "targetId": "2fd6-07af-449e-3116"}
+        ],
+        "constraints": [{"id": "9b8d-e650-5e0f-4742", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 100}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
+        "infoLinks": [
+          {
+            "name": "Captain",
+            "id": "0161-4b2a-a3bd-f5a5",
+            "hidden": false,
+            "targetId": "ab3f-2ac8-9201-fee1",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "8610-5362-9799-a895",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "888c-af14-d16c-bd61",
+                    "childName": "+1 Move",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "dfba-f345-52aa-b3ce",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "63ff-95b6-314a-2726",
+                    "childName": "+1 Fight",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "5ad6-ff62-d51a-99ff",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "bc2f-6968-901f-694a",
+                    "childName": "+1 Shoot",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "4315-b0cf-3d0c-06da",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "9570-2ac3-e338-6b90",
+                    "childName": "+1 Will",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "25d8-276c-5e4e-565a",
+                "type": "increment",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "e438-d71e-e47e-c53f",
+                    "childName": "+2 Health",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "8610-5362-9799-a895",
+                "type": "decrement",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "a8df-bdf8-5f2a-3b59",
+                    "childName": "Mail Armour",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cbca-7c83-8b5b-88a5",
+                "type": "increment",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "a8df-bdf8-5f2a-3b59",
+                    "childName": "Mail Armour",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cbca-7c83-8b5b-88a5",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "a3be-c530-41a2-d93b",
+                    "childName": "Leather Armour",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cbca-7c83-8b5b-88a5",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "0ea5-ec99-dd61-021a",
+                    "childName": "Shield",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Stat Increase",
+            "id": "075b-36c8-3298-6db0",
+            "collapsible": true,
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {"id": "e641-6c20-9b1c-e2b5-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "e641-6c20-9b1c-e2b5-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "entryLinks": [
+              {"name": "+1 Fight", "id": "f34a-d993-2270-5ae7", "hidden": false, "import": true, "sortIndex": 2, "targetId": "63ff-95b6-314a-2726", "type": "selectionEntry"},
+              {"name": "+1 Move", "id": "888c-af14-d16c-bd61", "hidden": false, "import": true, "sortIndex": 1, "targetId": "7ad6-95cc-b51c-1806", "type": "selectionEntry"},
+              {"name": "+1 Shoot", "id": "5b4d-142c-79cd-21ea", "hidden": false, "import": true, "sortIndex": 3, "targetId": "bc2f-6968-901f-694a", "type": "selectionEntry"},
+              {"name": "+1 Will", "id": "d6fd-1c96-76ff-503f", "hidden": false, "import": true, "sortIndex": 4, "targetId": "9570-2ac3-e338-6b90", "type": "selectionEntry"},
+              {"name": "+2 Health", "id": "24ab-0eb5-f6ef-9670", "hidden": false, "import": true, "sortIndex": 5, "targetId": "e438-d71e-e47e-c53f", "type": "selectionEntry"}
+            ]
+          },
+          {
+            "name": "Captain Equipment",
+            "id": "5185-8d83-7e2a-4d50",
+            "collapsible": true,
+            "hidden": false,
+            "sortIndex": 2,
+            "constraints": [{"id": "7860-c789-1259-89a6", "field": "002c-4fdb-9046-f296", "includeChildSelections": true, "scope": "parent", "shared": true, "type": "max", "value": 5}],
+            "selectionEntryGroups": [
+              {
+                "name": "Weapons",
+                "id": "a409-56f7-81b3-76a8",
+                "hidden": false,
+                "entryLinks": [
+                  {"name": "Hand Weapon", "id": "8fe4-7cde-70c2-154b", "hidden": false, "import": true, "targetId": "cb15-da89-d6e7-da0b", "type": "selectionEntry"},
+                  {
+                    "name": "Dagger",
+                    "id": "ae72-12ce-fac3-956f",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "e7f8-65df-297b-ba05",
+                    "type": "selectionEntry",
+                    "constraints": [{"id": "4c36-714b-aadd-8241", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": -1}],
+                    "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 5}],
+                    "modifiers": [
+                      {
+                        "field": "4c36-714b-aadd-8241",
+                        "type": "set",
+                        "value": 0,
+                        "conditions": [
+                          {
+                            "childId": "0ea5-ec99-dd61-021a",
+                            "childName": "Shield",
+                            "field": "selections",
+                            "includeChildSelections": true,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "atLeast",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Bow",
+                    "id": "cff7-f89c-5f29-9214",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "6259-634d-f0c1-793f",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 5}]
+                  },
+                  {
+                    "name": "Crossbow",
+                    "id": "fe58-f884-2b07-981c",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "ab43-9c91-0059-abf0",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 5}]
+                  },
+                  {
+                    "name": "Two-Handed Weapon",
+                    "id": "3e34-ebef-7c32-5279",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "3cc7-ec6a-8ba2-ff04",
+                    "type": "selectionEntry",
+                    "constraints": [{"id": "e590-7aa5-a6f8-b850", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": -1}],
+                    "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 5}],
+                    "modifiers": [
+                      {
+                        "field": "e590-7aa5-a6f8-b850",
+                        "type": "set",
+                        "value": 0,
+                        "conditionGroups": [
+                          {
+                            "type": "or",
+                            "conditions": [
+                              {
+                                "childId": "e7f8-65df-297b-ba05",
+                                "childName": "Dagger",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "parent",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              },
+                              {
+                                "childId": "3cac-88cd-415a-b80f",
+                                "childName": "Staff",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "parent",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              },
+                              {
+                                "childId": "cb15-da89-d6e7-da0b",
+                                "childName": "Hand Weapon",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "parent",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              },
+                              {"childId": "0ea5-ec99-dd61-021a", "childName": "Shield", "field": "selections", "scope": "parent", "shared": true, "type": "atLeast", "value": 1}
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Staff",
+                    "id": "584f-07ae-da52-65d8",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "3cac-88cd-415a-b80f",
+                    "type": "selectionEntry",
+                    "constraints": [{"id": "11e5-af3f-49db-4d39", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": -1}],
+                    "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 5}],
+                    "modifiers": [
+                      {
+                        "field": "11e5-af3f-49db-4d39",
+                        "type": "set",
+                        "value": 0,
+                        "conditionGroups": [
+                          {
+                            "type": "or",
+                            "conditions": [
+                              {
+                                "childId": "e7f8-65df-297b-ba05",
+                                "childName": "Dagger",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "parent",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              },
+                              {
+                                "childId": "3cc7-ec6a-8ba2-ff04",
+                                "childName": "Two-Handed Weapon",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "parent",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              },
+                              {
+                                "childId": "cb15-da89-d6e7-da0b",
+                                "childName": "Hand Weapon",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "parent",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              },
+                              {"childId": "0ea5-ec99-dd61-021a", "childName": "Shield", "field": "selections", "scope": "parent", "shared": true, "type": "atLeast", "value": 1}
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Armour",
+                "id": "dd9c-b52b-135f-0110",
+                "hidden": false,
+                "entryLinks": [
+                  {
+                    "name": "Shield",
+                    "id": "11b3-0fe2-ff74-79a7",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "0ea5-ec99-dd61-021a",
+                    "type": "selectionEntry",
+                    "constraints": [{"id": "26fd-9c5c-4da8-d1d2", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 5}],
+                    "modifiers": [
+                      {
+                        "field": "26fd-9c5c-4da8-d1d2",
+                        "type": "set",
+                        "value": 0,
+                        "conditionGroups": [
+                          {
+                            "type": "or",
+                            "conditions": [
+                              {
+                                "childId": "e7f8-65df-297b-ba05",
+                                "childName": "Dagger",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "parent",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              },
+                              {
+                                "childId": "3cac-88cd-415a-b80f",
+                                "childName": "Staff",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "parent",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              },
+                              {
+                                "childId": "3cc7-ec6a-8ba2-ff04",
+                                "childName": "Two-Handed Weapon",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "parent",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Leather or Mail Armour",
+                    "id": "33ea-f374-78e6-d015",
+                    "hidden": false,
+                    "constraints": [{"id": "a68c-15b0-294e-6cd3", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "selectionEntries": [
+                      {
+                        "name": "Leather Armour",
+                        "id": "a3be-c530-41a2-d93b",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "constraints": [{"id": "7ca2-c3f0-215e-da08", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+                        "infoLinks": [
+                          {
+                            "name": "Light Armour",
+                            "id": "48e8-a6c4-3fb1-a333",
+                            "hidden": false,
+                            "targetId": "93fb-2683-4918-018c",
+                            "type": "profile",
+                            "modifiers": [{"field": "name", "type": "set", "value": "Leather Armour"}]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Mail Armour",
+                        "id": "a8df-bdf8-5f2a-3b59",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "constraints": [{"id": "88ef-12b9-4dc9-34e0", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 5}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+                        "infoLinks": [
+                          {
+                            "name": "Heavy Armour",
+                            "id": "f151-a1fa-dd99-e46a",
+                            "hidden": false,
+                            "targetId": "3512-9e37-26b0-f401",
+                            "type": "profile",
+                            "modifiers": [{"field": "name", "type": "set", "value": "Mail Armour"}]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tricks of the Trade",
+            "id": "3c6e-8512-e5b4-6120",
+            "hidden": false,
+            "sortIndex": 3,
+            "constraints": [{"id": "4251-c191-c054-eff0", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "selectionEntries": [
+              {
+                "name": "Furious Attack",
+                "id": "9f26-b2c0-a9d6-376b",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "constraints": [{"id": "e1c4-dc77-8270-249c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Furious Attack", "id": "586a-2e1f-e691-6843", "hidden": false, "targetId": "cc6a-0cc6-8d6a-6fd5", "type": "profile"}]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -18,7 +18,9 @@
         "hidden": true,
         "constraints": [{"id": "1771-fb97-5c00-01da", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 8}]
       },
-      {"name": "Animal Companions", "id": "fcc3-18b2-3f6d-0762", "hidden": false}
+      {"name": "Animal Companions", "id": "fcc3-18b2-3f6d-0762", "hidden": false},
+      {"name": "Summoned", "id": "5569-7377-0462-d49d", "hidden": false},
+      {"name": "Configuration", "id": "a7f7-a7e7-379c-aa0f", "hidden": false}
     ],
     "costTypes": [{"name": "gc", "id": "8af7-6c9e-2277-7dc1", "defaultCostLimit": 400}, {"name": "Slots", "id": "002c-4fdb-9046-f296", "defaultCostLimit": -1, "hidden": true}],
     "entryLinks": [
@@ -40,90 +42,12 @@
       {"name": "Tracker", "id": "952c-e4e5-a558-316b", "hidden": false, "import": true, "targetId": "c76f-2f51-ba3d-760f", "type": "selectionEntry"},
       {"name": "Treasure Hunter", "id": "f4db-c824-8d5a-4beb", "hidden": false, "import": true, "targetId": "a1aa-70fe-1d47-365d", "type": "selectionEntry"},
       {"name": "War Hound", "id": "3c66-4329-18b6-85ac", "hidden": false, "import": true, "targetId": "c1e9-9c36-cde3-5e66", "type": "selectionEntry"},
-      {"name": "Bear", "id": "c13e-371b-bfa4-9f30", "hidden": false, "import": true, "targetId": "5f92-2573-6362-0143", "type": "selectionEntry"}
-    ],
-    "forceEntries": [
-      {
-        "name": "Warband",
-        "id": "646f-e9ee-2d84-0cc6",
-        "hidden": false,
-        "categoryLinks": [
-          {
-            "name": "Spellbook",
-            "id": "03b1-49e3-72db-eb2a",
-            "hidden": false,
-            "targetId": "e4b2-00a6-096d-f592",
-            "constraints": [
-              {
-                "id": "7a1e-7f13-6e89-f67b",
-                "field": "selections",
-                "includeChildForces": true,
-                "includeChildSelections": true,
-                "scope": "force",
-                "shared": true,
-                "type": "max",
-                "value": 1
-              }
-            ]
-          },
-          {
-            "name": "Wizard",
-            "id": "20e4-c8ec-899d-b729",
-            "hidden": false,
-            "targetId": "6162-1a30-2c5f-5ca6",
-            "constraints": [
-              {
-                "id": "33f8-b54e-e31a-981c",
-                "field": "selections",
-                "includeChildForces": true,
-                "includeChildSelections": true,
-                "scope": "force",
-                "shared": true,
-                "type": "max",
-                "value": 1
-              }
-            ]
-          },
-          {
-            "name": "Apprentice",
-            "id": "2843-666f-b6ee-a4ab",
-            "hidden": false,
-            "targetId": "8fff-2d5e-cbae-f80c",
-            "constraints": [
-              {
-                "id": "4964-26f1-8cab-2c5f",
-                "field": "selections",
-                "includeChildForces": true,
-                "includeChildSelections": true,
-                "scope": "force",
-                "shared": true,
-                "type": "max",
-                "value": 1
-              }
-            ]
-          },
-          {
-            "name": "Specialist Soldiers",
-            "id": "8309-7d2a-06a8-6c5a",
-            "hidden": false,
-            "targetId": "c622-45fe-1d3d-d1f3",
-            "constraints": [
-              {
-                "id": "81d4-b0db-71f9-4598",
-                "field": "selections",
-                "includeChildForces": true,
-                "includeChildSelections": true,
-                "scope": "force",
-                "shared": true,
-                "type": "max",
-                "value": 4
-              }
-            ]
-          },
-          {"name": "Standard Soldiers", "id": "ccc1-1c7a-4b57-b075", "hidden": false, "targetId": "f895-2e12-3952-75b8"},
-          {"name": "Animal Companions", "id": "320a-8960-957e-8897", "hidden": false, "targetId": "fcc3-18b2-3f6d-0762"}
-        ]
-      }
+      {"name": "Bear", "id": "c13e-371b-bfa4-9f30", "hidden": false, "import": true, "targetId": "5f92-2573-6362-0143", "type": "selectionEntry"},
+      {"name": "Ice Toad", "id": "a5e3-db74-c3dc-2064", "hidden": false, "import": true, "targetId": "f11d-d5ff-9f5d-b9ef", "type": "selectionEntry"},
+      {"name": "Wolf", "id": "aca4-8307-346b-6ba7", "hidden": false, "import": true, "targetId": "4aba-c349-edd1-755b", "type": "selectionEntry"},
+      {"name": "Snow Leopard", "id": "b579-d137-c676-4c03", "hidden": false, "import": true, "targetId": "4eb8-7abf-8350-2b5d", "type": "selectionEntry"},
+      {"name": "Imp", "id": "cfbf-ca20-4f12-3c59", "hidden": false, "import": true, "targetId": "3fa5-ff9c-f6b6-f89d", "type": "selectionEntry"},
+      {"name": "Options", "id": "709f-da80-5d75-5837", "hidden": false, "import": true, "targetId": "a28f-f196-ff84-a70c", "type": "selectionEntry"}
     ],
     "profileTypes": [
       {
@@ -2004,6 +1928,8 @@
         "name": "Bear",
         "id": "ab60-c09d-7bf7-5025",
         "hidden": false,
+        "page": "179",
+        "publicationId": "aa94-68df-16ee-0a61",
         "typeId": "79ed-bd4a-1464-5726",
         "typeName": "Figure",
         "characteristics": [
@@ -2015,6 +1941,76 @@
           {"name": "H", "$text": "14", "typeId": "25d8-276c-5e4e-565a"},
           {"name": "Notes", "$text": "Animal, Large, Strong", "typeId": "bae0-aabe-f933-1045"}
         ]
+      },
+      {
+        "name": "Ice Toad",
+        "id": "6af7-f129-766a-d9b7",
+        "hidden": false,
+        "page": "180",
+        "publicationId": "aa94-68df-16ee-0a61",
+        "typeId": "79ed-bd4a-1464-5726",
+        "typeName": "Figure",
+        "characteristics": [
+          {"name": "M", "$text": "4", "typeId": "8610-5362-9799-a895"},
+          {"name": "F", "$text": "+2", "typeId": "dfba-f345-52aa-b3ce"},
+          {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
+          {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
+          {"name": "W", "$text": "+0", "typeId": "4315-b0cf-3d0c-06da"},
+          {"name": "H", "$text": "5", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "Amphibious, Animal, Powerful", "typeId": "bae0-aabe-f933-1045"}
+        ]
+      },
+      {
+        "name": "Wolf",
+        "id": "d08a-979a-1de8-ad15",
+        "hidden": false,
+        "page": "182",
+        "publicationId": "aa94-68df-16ee-0a61",
+        "typeId": "79ed-bd4a-1464-5726",
+        "typeName": "Figure",
+        "characteristics": [
+          {"name": "M", "$text": "8", "typeId": "8610-5362-9799-a895"},
+          {"name": "F", "$text": "+1", "typeId": "dfba-f345-52aa-b3ce"},
+          {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
+          {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
+          {"name": "W", "$text": "+0", "typeId": "4315-b0cf-3d0c-06da"},
+          {"name": "H", "$text": "6", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "Animal, Pack Hunter", "typeId": "bae0-aabe-f933-1045"}
+        ]
+      },
+      {
+        "name": "Snow Leopard",
+        "id": "d9e7-e3a6-6ed1-5761",
+        "hidden": false,
+        "page": "182",
+        "publicationId": "aa94-68df-16ee-0a61",
+        "typeId": "79ed-bd4a-1464-5726",
+        "typeName": "Figure",
+        "characteristics": [
+          {"name": "M", "$text": "8", "typeId": "8610-5362-9799-a895"},
+          {"name": "F", "$text": "+3", "typeId": "dfba-f345-52aa-b3ce"},
+          {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
+          {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
+          {"name": "W", "$text": "+2", "typeId": "4315-b0cf-3d0c-06da"},
+          {"name": "H", "$text": "10", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "Animal, Expert Climber", "typeId": "bae0-aabe-f933-1045"}
+        ]
+      },
+      {
+        "name": "Imp",
+        "id": "3e30-b22a-d063-550b",
+        "hidden": false,
+        "typeId": "79ed-bd4a-1464-5726",
+        "typeName": "Figure",
+        "characteristics": [
+          {"name": "M", "$text": "6", "typeId": "8610-5362-9799-a895"},
+          {"name": "F", "$text": "+1", "typeId": "dfba-f345-52aa-b3ce"},
+          {"name": "S", "$text": "+0", "typeId": "5ad6-ff62-d51a-99ff"},
+          {"name": "A", "$text": "10", "typeId": "cbca-7c83-8b5b-88a5"},
+          {"name": "W", "$text": "+4", "typeId": "4315-b0cf-3d0c-06da"},
+          {"name": "H", "$text": "6", "typeId": "25d8-276c-5e4e-565a"},
+          {"name": "Notes", "$text": "Demon", "typeId": "bae0-aabe-f933-1045"}
+        ]
       }
     ],
     "sharedRules": [
@@ -2022,15 +2018,64 @@
         "name": "Animal",
         "id": "a43e-8ad8-a58a-88ca",
         "description": "A natural creature with less-than-human intelligence. Even if they become a member of a warband, animals cannot pick up treasure tokens and have no item slots.",
-        "hidden": false
+        "hidden": false,
+        "page": "194",
+        "publicationId": "aa94-68df-16ee-0a61"
       },
       {
         "name": "Large",
         "id": "2900-d670-a165-b40e",
         "description": "This huge creature is easier to target with shooting attacks. It suffers from the Large Target modifier (-2) when defending against shooting attacks.",
-        "hidden": false
+        "hidden": false,
+        "page": "196",
+        "publicationId": "aa94-68df-16ee-0a61"
       },
-      {"name": "Strong", "id": "4198-0038-7d2f-251c", "description": "This creature does +2 damage.", "hidden": false}
+      {
+        "name": "Strong",
+        "id": "4198-0038-7d2f-251c",
+        "description": "This creature does +2 damage.",
+        "hidden": false,
+        "page": "197",
+        "publicationId": "aa94-68df-16ee-0a61"
+      },
+      {
+        "name": "Amphibious",
+        "id": "1440-e007-142a-b8f2",
+        "description": "This creature is perfectly happy on land or in the water. It automatically passes all Swimming Rolls, treats water as normal instead of rough ground, and suffers no Fight penalties for being in the water.",
+        "hidden": false,
+        "page": "193",
+        "publicationId": "aa94-68df-16ee-0a61"
+      },
+      {
+        "name": "Expert Climber",
+        "id": "6cf8-1e86-3ae1-a4fe",
+        "description": "This creature suffers no movement penalty for climbing.",
+        "hidden": false,
+        "page": "195",
+        "publicationId": "aa94-68df-16ee-0a61"
+      },
+      {
+        "name": "Pack Hunter",
+        "id": "adc1-6510-e21a-8a32",
+        "description": "If more than one of these creatures appears at the same time, place them in base contact. Whenever a pack hunter is activated, all other pack hunters in contact with it should be activated and moved as one. Roll randomly to see which creature is the ‘pack leader’ and determine the pack’s actions using that figure.",
+        "hidden": false,
+        "page": "197",
+        "publicationId": "aa94-68df-16ee-0a61"
+      },
+      {
+        "name": "Powerful",
+        "id": "be27-7ad3-6f04-5b31",
+        "description": "Damage dealt by this creature is doubled.",
+        "hidden": false,
+        "page": "197",
+        "publicationId": "aa94-68df-16ee-0a61"
+      },
+      {
+        "name": "Demon",
+        "id": "3d91-4ed4-f8df-3ed2",
+        "description": "All attacks made by this creature count as magic attacks. This creature is immune to poison. Demons can pick up and carry treasure tokens but have no item slots.",
+        "hidden": false
+      }
     ],
     "sharedSelectionEntries": [
       {
@@ -2456,7 +2501,6 @@
           {"name": "Soldier", "id": "5428-3786-1f39-fbf6", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"},
           {"name": "Standard Soldiers", "id": "1c61-c8e4-870e-1296", "hidden": false, "primary": false, "targetId": "f895-2e12-3952-75b8"}
         ],
-        "constraints": [{"id": "e1e7-1e11-db32-c068", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 2}],
         "infoLinks": [
           {
             "name": "Bear",
@@ -2489,6 +2533,283 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Wolf",
+        "id": "4aba-c349-edd1-755b",
+        "comment": "Animal Companion",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Animal Companions", "id": "d9db-fc58-a827-ff9f", "hidden": false, "primary": true, "targetId": "fcc3-18b2-3f6d-0762"},
+          {"name": "Soldier", "id": "3af7-217e-f797-1272", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"},
+          {"name": "Standard Soldiers", "id": "2764-3692-0990-2f9c", "hidden": false, "primary": false, "targetId": "f895-2e12-3952-75b8"}
+        ],
+        "infoLinks": [
+          {
+            "name": "Wolf",
+            "id": "4058-d9f0-8a9e-ea7f",
+            "hidden": false,
+            "targetId": "d08a-979a-1de8-ad15",
+            "type": "profile",
+            "modifiers": [{"field": "4315-b0cf-3d0c-06da", "type": "increment", "value": 3}]
+          },
+          {"name": "Animal", "id": "e48a-37d9-a63e-3ff8", "hidden": false, "targetId": "a43e-8ad8-a58a-88ca", "type": "rule"},
+          {"name": "Pack Hunter", "id": "42a5-66ba-106d-2278", "hidden": false, "targetId": "adc1-6510-e21a-8a32", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "ac99-1dc6-8e7d-f7df",
+                "childName": "Animal Companion",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Snow Leopard",
+        "id": "4eb8-7abf-8350-2b5d",
+        "comment": "Animal Companion",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Animal Companions", "id": "f031-8ec7-d312-9267", "hidden": false, "primary": true, "targetId": "fcc3-18b2-3f6d-0762"},
+          {"name": "Soldier", "id": "77b2-4d46-4744-a512", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"},
+          {"name": "Standard Soldiers", "id": "a005-8087-d8ff-9a8c", "hidden": false, "primary": false, "targetId": "f895-2e12-3952-75b8"}
+        ],
+        "infoLinks": [
+          {
+            "name": "Snow Leopard",
+            "id": "1166-372f-8446-6b2d",
+            "hidden": false,
+            "targetId": "d9e7-e3a6-6ed1-5761",
+            "type": "profile",
+            "modifiers": [{"field": "4315-b0cf-3d0c-06da", "type": "increment", "value": 3}]
+          },
+          {"name": "Animal", "id": "00a7-b78b-6bde-4eaa", "hidden": false, "targetId": "a43e-8ad8-a58a-88ca", "type": "rule"},
+          {"name": "Expert Climber", "id": "9ff0-4d3b-9f26-3f74", "hidden": false, "targetId": "6cf8-1e86-3ae1-a4fe", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "ac99-1dc6-8e7d-f7df",
+                "childName": "Animal Companion",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ice Toad",
+        "id": "f11d-d5ff-9f5d-b9ef",
+        "comment": "Animal Companion",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Animal Companions", "id": "c66e-4465-b195-dc75", "hidden": false, "primary": true, "targetId": "fcc3-18b2-3f6d-0762"},
+          {"name": "Soldier", "id": "d967-5b06-77cc-e1fd", "hidden": false, "primary": false, "targetId": "ff56-8f5e-46b5-2369"},
+          {"name": "Standard Soldiers", "id": "11c3-c06f-3554-c5ae", "hidden": false, "primary": false, "targetId": "f895-2e12-3952-75b8"}
+        ],
+        "infoLinks": [
+          {
+            "name": "Ice Toad",
+            "id": "5288-6b73-84c4-1f80",
+            "hidden": false,
+            "targetId": "6af7-f129-766a-d9b7",
+            "type": "profile",
+            "modifiers": [{"field": "4315-b0cf-3d0c-06da", "type": "increment", "value": 3}]
+          },
+          {"name": "Animal", "id": "f717-7122-df9a-5319", "hidden": false, "targetId": "a43e-8ad8-a58a-88ca", "type": "rule"},
+          {"name": "Amphibious", "id": "a8f5-222d-8c40-133a", "hidden": false, "targetId": "1440-e007-142a-b8f2", "type": "rule"},
+          {"name": "Powerful", "id": "e97c-bff6-0119-0093", "hidden": false, "targetId": "be27-7ad3-6f04-5b31", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "ac99-1dc6-8e7d-f7df",
+                "childName": "Animal Companion",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Imp",
+        "id": "3fa5-ff9c-f6b6-f89d",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Summoned", "id": "ff44-b15a-1069-aefb", "hidden": false, "primary": true, "targetId": "5569-7377-0462-d49d"}],
+        "infoLinks": [
+          {"name": "Imp", "id": "024f-ff49-6bd7-aab7", "hidden": false, "targetId": "3e30-b22a-d063-550b", "type": "profile"},
+          {"name": "Demon", "id": "d075-7ec0-c2b5-8e9a", "hidden": false, "targetId": "3d91-4ed4-f8df-3ed2", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "ea4b-844f-a59f-7107",
+                "childName": "Imp",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Supplements",
+        "id": "a28f-f196-ff84-a70c",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Configuration", "id": "5f06-ef18-140b-d8bf", "hidden": false, "primary": true, "targetId": "a7f7-a7e7-379c-aa0f"}],
+        "selectionEntries": [
+          {
+            "name": "Sellsword",
+            "id": "7c7f-009e-1472-3976",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "5bd0-947d-3bbb-ebc0", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          }
+        ]
+      },
+      {"name": "+1 Fight", "id": "63ff-95b6-314a-2726", "hidden": false, "import": true, "type": "upgrade"},
+      {"name": "+1 Health", "id": "3730-b6cd-a271-7365", "hidden": false, "import": true, "type": "upgrade"},
+      {"name": "+1 Shoot", "id": "bc2f-6968-901f-694a", "hidden": false, "import": true, "type": "upgrade"},
+      {"name": "+1 Will", "id": "9570-2ac3-e338-6b90", "hidden": false, "import": true, "type": "upgrade"},
+      {"name": "+1 Move", "id": "7ad6-95cc-b51c-1806", "hidden": false, "import": true, "type": "upgrade"},
+      {"name": "+2 Health", "id": "e438-d71e-e47e-c53f", "hidden": false, "import": true, "type": "upgrade"},
+      {
+        "name": "Bow",
+        "id": "6259-634d-f0c1-793f",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+        "infoLinks": [{"name": "Bow", "id": "3e51-738e-957c-e31d", "hidden": false, "targetId": "3b15-3de2-c008-2b1a", "type": "profile"}]
+      },
+      {
+        "name": "Crossbow",
+        "id": "ab43-9c91-0059-abf0",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+        "infoLinks": [{"name": "Crossbow", "id": "28d6-979e-2353-915f", "hidden": false, "targetId": "6183-8005-a0ea-1ed5", "type": "profile"}]
+      },
+      {
+        "name": "Hand Weapon",
+        "id": "cb15-da89-d6e7-da0b",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+        "infoLinks": [{"name": "Hand Weapon", "id": "fead-cc01-d9d5-cf2d", "hidden": false, "targetId": "86fa-403e-d2f1-33c1", "type": "profile"}]
+      },
+      {
+        "name": "Staff",
+        "id": "3cac-88cd-415a-b80f",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+        "infoLinks": [{"name": "Staff", "id": "844e-c6be-8edc-dd52", "hidden": false, "targetId": "8436-097b-861a-27e9", "type": "profile"}]
+      },
+      {
+        "name": "Two-Handed Weapon",
+        "id": "3cc7-ec6a-8ba2-ff04",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 2}],
+        "infoLinks": [{"name": "Two-Handed Weapon", "id": "dd3f-4486-fa18-1a82", "hidden": false, "targetId": "e8c0-7d93-006a-2cf7", "type": "profile"}]
+      },
+      {
+        "name": "Unarmed",
+        "id": "acc7-5995-b737-0153",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Unarmed", "id": "a7d2-51d6-20a6-7ec6", "hidden": false, "targetId": "5a92-dac1-1a04-4438", "type": "profile"}]
+      },
+      {
+        "name": "Heavy Armour",
+        "id": "f8ac-a8e5-d5b4-2c47",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+        "infoLinks": [{"name": "Heavy Armour", "id": "3089-a36a-101d-ad93", "hidden": false, "targetId": "3512-9e37-26b0-f401", "type": "profile"}]
+      },
+      {
+        "name": "Light Armour",
+        "id": "bd69-58c7-04ac-3780",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+        "infoLinks": [{"name": "Light Armour", "id": "ae1c-31f8-8022-0fd5", "hidden": false, "targetId": "93fb-2683-4918-018c", "type": "profile"}]
+      },
+      {
+        "name": "Shield",
+        "id": "0ea5-ec99-dd61-021a",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+        "infoLinks": [{"name": "Shield", "id": "3378-c98f-4151-489f", "hidden": false, "targetId": "1095-b734-df21-8c99", "type": "profile"}]
+      },
+      {
+        "name": "Quiver",
+        "id": "48cf-35d2-68d4-7788",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
+        "infoLinks": [{"name": "Quiver", "id": "f76a-0c4f-17ef-7265", "hidden": false, "targetId": "5463-ffd8-4a63-ab0e", "type": "profile"}]
       }
     ],
     "sharedSelectionEntryGroups": [
@@ -2789,34 +3110,10 @@
         "id": "5825-cab5-235b-f494",
         "collapsible": true,
         "hidden": false,
-        "selectionEntries": [
-          {
-            "name": "Shield",
-            "id": "0ea5-ec99-dd61-021a",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
-            "infoLinks": [{"name": "Shield", "id": "3378-c98f-4151-489f", "hidden": false, "targetId": "1095-b734-df21-8c99", "type": "profile"}]
-          },
-          {
-            "name": "Light Armour",
-            "id": "bd69-58c7-04ac-3780",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
-            "infoLinks": [{"name": "Light Armour", "id": "ae1c-31f8-8022-0fd5", "hidden": false, "targetId": "93fb-2683-4918-018c", "type": "profile"}]
-          },
-          {
-            "name": "Heavy Armour",
-            "id": "f8ac-a8e5-d5b4-2c47",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
-            "infoLinks": [{"name": "Heavy Armour", "id": "3089-a36a-101d-ad93", "hidden": false, "targetId": "3512-9e37-26b0-f401", "type": "profile"}]
-          }
+        "entryLinks": [
+          {"name": "Shield", "id": "cab2-de73-98e5-6e17", "hidden": false, "targetId": "0ea5-ec99-dd61-021a", "type": "selectionEntry"},
+          {"name": "Heavy Armour", "id": "e98f-df33-1018-0aa4", "hidden": false, "targetId": "f8ac-a8e5-d5b4-2c47", "type": "selectionEntry"},
+          {"name": "Light Armour", "id": "bc56-6954-ee88-7636", "hidden": false, "targetId": "bd69-58c7-04ac-3780", "type": "selectionEntry"}
         ]
       },
       {
@@ -2824,71 +3121,14 @@
         "id": "3ed0-fef2-6e3d-81e2",
         "collapsible": true,
         "hidden": false,
-        "entryLinks": [{"name": "Dagger", "id": "efbd-09e2-c0b9-97e0", "hidden": false, "import": true, "targetId": "e7f8-65df-297b-ba05", "type": "selectionEntry"}],
-        "selectionEntries": [
-          {
-            "name": "Hand Weapon",
-            "id": "cb15-da89-d6e7-da0b",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
-            "infoLinks": [{"name": "Hand Weapon", "id": "fead-cc01-d9d5-cf2d", "hidden": false, "targetId": "86fa-403e-d2f1-33c1", "type": "profile"}]
-          },
-          {
-            "name": "Two-Handed Weapon",
-            "id": "3cc7-ec6a-8ba2-ff04",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 2}],
-            "infoLinks": [{"name": "Two-Handed Weapon", "id": "dd3f-4486-fa18-1a82", "hidden": false, "targetId": "e8c0-7d93-006a-2cf7", "type": "profile"}]
-          },
-          {
-            "name": "Staff",
-            "id": "3cac-88cd-415a-b80f",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
-            "infoLinks": [{"name": "Staff", "id": "844e-c6be-8edc-dd52", "hidden": false, "targetId": "8436-097b-861a-27e9", "type": "profile"}]
-          },
-          {
-            "name": "Bow",
-            "id": "6259-634d-f0c1-793f",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
-            "infoLinks": [{"name": "Bow", "id": "3e51-738e-957c-e31d", "hidden": false, "targetId": "3b15-3de2-c008-2b1a", "type": "profile"}]
-          },
-          {
-            "name": "Crossbow",
-            "id": "ab43-9c91-0059-abf0",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
-            "infoLinks": [{"name": "Crossbow", "id": "28d6-979e-2353-915f", "hidden": false, "targetId": "6183-8005-a0ea-1ed5", "type": "profile"}]
-          },
-          {
-            "name": "Unarmed",
-            "id": "acc7-5995-b737-0153",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "infoLinks": [{"name": "Unarmed", "id": "a7d2-51d6-20a6-7ec6", "hidden": false, "targetId": "5a92-dac1-1a04-4438", "type": "profile"}]
-          },
-          {
-            "name": "Free Dagger",
-            "id": "faae-5e61-924a-9428",
-            "hidden": true,
-            "import": true,
-            "sortIndex": 1,
-            "type": "upgrade",
-            "constraints": [{"id": "04a0-f439-35d3-07d2", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
-            "infoLinks": [{"name": "Dagger", "id": "bcc4-37fe-3e6f-14af", "hidden": false, "targetId": "6744-d3a4-60c1-5944", "type": "profile"}]
-          }
+        "entryLinks": [
+          {"name": "Unarmed", "id": "b773-5520-f4f7-3982", "hidden": false, "targetId": "acc7-5995-b737-0153", "type": "selectionEntry"},
+          {"name": "Two-Handed Weapon", "id": "5175-853b-ab7b-11d1", "hidden": false, "targetId": "3cc7-ec6a-8ba2-ff04", "type": "selectionEntry"},
+          {"name": "Hand Weapon", "id": "6703-0288-34af-287e", "hidden": false, "targetId": "cb15-da89-d6e7-da0b", "type": "selectionEntry"},
+          {"name": "Staff", "id": "c56f-8a50-799d-e1bd", "hidden": false, "targetId": "3cac-88cd-415a-b80f", "type": "selectionEntry"},
+          {"name": "Dagger", "id": "efbd-09e2-c0b9-97e0", "hidden": false, "import": true, "targetId": "e7f8-65df-297b-ba05", "type": "selectionEntry"},
+          {"name": "Bow", "id": "eb6f-9308-5ce6-95a3", "hidden": false, "targetId": "6259-634d-f0c1-793f", "type": "selectionEntry"},
+          {"name": "Crossbow", "id": "0cf7-87f2-3ef9-a818", "hidden": false, "targetId": "ab43-9c91-0059-abf0", "type": "selectionEntry"}
         ]
       },
       {
@@ -2896,18 +3136,9 @@
         "id": "c57d-2fe6-f0c6-337d",
         "collapsible": true,
         "hidden": false,
-        "selectionEntries": [
-          {
-            "name": "Quiver",
-            "id": "48cf-35d2-68d4-7788",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 1}],
-            "infoLinks": [{"name": "Quiver", "id": "f76a-0c4f-17ef-7265", "hidden": false, "targetId": "5463-ffd8-4a63-ab0e", "type": "profile"}]
-          }
-        ]
-      }
+        "entryLinks": [{"name": "Quiver", "id": "8e76-9822-bf31-dc4f", "hidden": false, "targetId": "48cf-35d2-68d4-7788", "type": "selectionEntry"}]
+      },
+      {"name": "Stat Improvements", "id": "9561-addf-354a-94de", "collapsible": true, "hidden": false}
     ]
   }
 }
