@@ -76,6 +76,18 @@
         "import": true,
         "type": "upgrade",
         "selectionEntries": [{"name": "New Entry", "id": "9cfa-e64e-3338-db44", "hidden": false, "import": true, "type": "upgrade"}]
+      },
+      {
+        "name": "Level",
+        "id": "1752-2a2d-679b-0168",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "costs": [
+          {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+          {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+          {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": -100}
+        ]
       }
     ],
     "sharedSelectionEntryGroups": [
