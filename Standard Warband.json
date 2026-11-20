@@ -162,18 +162,30 @@
             "constraints": [{"id": "6c21-aff5-50ce-198a", "field": "002c-4fdb-9046-f296", "scope": "parent", "shared": true, "type": "max", "value": 5}]
           },
           {
-            "name": "Level",
-            "id": "18fe-cb90-21c2-c5d3",
+            "name": "Experience and Level",
+            "id": "f51c-d9ed-4a30-c6a9",
             "hidden": false,
             "import": true,
-            "targetId": "1752-2a2d-679b-0168",
-            "type": "selectionEntry",
+            "sortIndex": 1,
+            "targetId": "c485-b130-39f9-9bf1",
+            "type": "selectionEntryGroup",
             "modifiers": [
               {
                 "field": "hidden",
                 "type": "set",
                 "value": true,
-                "conditions": [{"childId": "any", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "lessThan", "value": 1}]
+                "conditions": [
+                  {
+                    "childId": "6779-5a12-5430-0683",
+                    "childName": "Show Campaign",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
               }
             ]
           }
@@ -200,127 +212,6 @@
                     "shared": true,
                     "type": "atLeast",
                     "value": 1
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "selectionEntryGroups": [
-          {
-            "name": "Stat Increases",
-            "id": "eecd-5d77-2383-921f",
-            "collapsible": true,
-            "hidden": false,
-            "entryLinks": [
-              {
-                "name": "+1 Fight",
-                "id": "38f4-f2bb-a1d5-5eb6",
-                "hidden": false,
-                "import": true,
-                "sortIndex": 2,
-                "targetId": "63ff-95b6-314a-2726",
-                "type": "selectionEntry",
-                "modifiers": [
-                  {
-                    "affects": "self.entries.recursive.profiles.Figure",
-                    "field": "dfba-f345-52aa-b3ce",
-                    "scope": "parent",
-                    "type": "increment",
-                    "value": 1,
-                    "repeats": [
-                      {
-                        "childId": "63ff-95b6-314a-2726",
-                        "childName": "+1 Fight",
-                        "field": "selections",
-                        "repeats": 1,
-                        "roundUp": false,
-                        "scope": "parent",
-                        "shared": true,
-                        "value": 1
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "+1 Shoot",
-                "id": "5714-89d1-6532-08fd",
-                "hidden": false,
-                "import": true,
-                "sortIndex": 3,
-                "targetId": "bc2f-6968-901f-694a",
-                "type": "selectionEntry",
-                "modifiers": [
-                  {
-                    "affects": "self.entries.recursive.profiles.Figure",
-                    "field": "5ad6-ff62-d51a-99ff",
-                    "scope": "parent",
-                    "type": "increment",
-                    "value": 1,
-                    "repeats": [
-                      {
-                        "childId": "bc2f-6968-901f-694a",
-                        "childName": "+1 Shoot",
-                        "field": "selections",
-                        "repeats": 1,
-                        "roundUp": false,
-                        "scope": "parent",
-                        "shared": true,
-                        "value": 1
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "+1 Will",
-                "id": "ffdc-7306-060e-1ece",
-                "hidden": false,
-                "import": true,
-                "sortIndex": 4,
-                "targetId": "9570-2ac3-e338-6b90",
-                "type": "selectionEntry",
-                "modifiers": [
-                  {
-                    "affects": "self.entries.recursive.profiles.Figure",
-                    "field": "4315-b0cf-3d0c-06da",
-                    "scope": "parent",
-                    "type": "increment",
-                    "value": 1,
-                    "repeats": [
-                      {"childId": "9570-2ac3-e338-6b90", "childName": "+1 Will", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "+1 Health",
-                "id": "9b86-5ebd-1f15-a408",
-                "hidden": false,
-                "import": true,
-                "sortIndex": 5,
-                "targetId": "3730-b6cd-a271-7365",
-                "type": "selectionEntry",
-                "modifiers": [
-                  {
-                    "affects": "self.entries.recursive.profiles.Figure",
-                    "field": "25d8-276c-5e4e-565a",
-                    "scope": "parent",
-                    "type": "increment",
-                    "value": 1,
-                    "repeats": [
-                      {
-                        "childId": "3730-b6cd-a271-7365",
-                        "childName": "+1 Health",
-                        "field": "selections",
-                        "repeats": 1,
-                        "roundUp": false,
-                        "scope": "parent",
-                        "shared": true,
-                        "value": 1
-                      }
-                    ]
                   }
                 ]
               }

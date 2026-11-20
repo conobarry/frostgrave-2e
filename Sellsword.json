@@ -8,6 +8,7 @@
     "library": true,
     "revision": 1,
     "type": "catalogue",
+    "catalogueLinks": [{"name": "Campaign", "id": "8d1d-1b78-a732-2a88", "targetId": "1417-89c4-f679-60d8", "type": "catalogue"}],
     "categoryEntries": [{"name": "Captain", "id": "2fd6-07af-449e-3116", "hidden": false}],
     "entryLinks": [{"name": "Captain", "id": "fb3a-5208-2f9d-a264", "hidden": false, "import": true, "targetId": "4b9b-18ae-def5-e5cd", "type": "selectionEntry"}],
     "profileTypes": [
@@ -15,6 +16,7 @@
         "name": "Trick of the Trade",
         "id": "43c7-a180-0f5f-6927",
         "hidden": false,
+        "sortIndex": 6,
         "characteristicTypes": [{"name": "Effect", "id": "e708-8a98-c786-d94d"}, {"name": "When to Declare", "id": "8bb4-05b2-0fba-6dc3"}]
       }
     ],
@@ -114,6 +116,108 @@
             "typeId": "15c1-2bd7-8969-1787"
           }
         ]
+      },
+      {
+        "name": "Tricks of the Trade",
+        "id": "2017-e9a8-5f1c-268e",
+        "hidden": false,
+        "typeId": "862c-226a-1aca-4ed2",
+        "typeName": "Ability",
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": "Each trick may be used once, and only once, during a game, so it is important to keep track of which tricks have been used. Using a trick does not require a special action to be taken - a player simply declares that it is being used at the appropriate moment, as noted in the 'When to Declare' column. There is no limit to the number of tricks that may be used with a single action or in any one turn. A captain may use a trick even if he is not currently being activated (e.g. he may choose to employ a Furious Attack in response to being attacked by an enemy model), and if two captains are duelling, both may employ as many tricks as they feel are needed to carry them to victory.\n\n",
+            "typeId": "15c1-2bd7-8969-1787"
+          }
+        ]
+      },
+      {
+        "name": "Brace",
+        "id": "6d2b-9e8d-d0e4-51c2",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {"name": "Effect", "$text": "+3 Armour for one attack", "typeId": "e708-8a98-c786-d94d"},
+          {"name": "When to Declare", "$text": "Before the rolls are made", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
+      },
+      {
+        "name": "Coup de Grâce",
+        "id": "c5b5-022a-e904-1890",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {"name": "Effect", "$text": "+2 Damage to any hand-to-hand attack that has dealt at least 1 point of damage", "typeId": "e708-8a98-c786-d94d"},
+          {"name": "When to Declare", "$text": "After damage is calculated", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
+      },
+      {
+        "name": "Dead Eye",
+        "id": "4ce0-903f-3199-8d20",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {"name": "Effect", "$text": "+1 Shoot for one attack", "typeId": "e708-8a98-c786-d94d"},
+          {"name": "When to Declare", "$text": "After the rolls are made", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
+      },
+      {
+        "name": "Dodge",
+        "id": "1f44-6b28-486c-6bb0",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {"name": "Effect", "$text": "+1 Armour for one attack", "typeId": "e708-8a98-c786-d94d"},
+          {"name": "When to Declare", "$text": "After the rolls are made", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
+      },
+      {
+        "name": "Iron Heart",
+        "id": "e521-aeb9-48d2-66bd",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {"name": "Effect", "$text": "+2 Will for one Will roll", "typeId": "e708-8a98-c786-d94d"},
+          {"name": "When to Declare", "$text": "After the roll is made", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
+      },
+      {
+        "name": "Nerves of Steel",
+        "id": "927a-5d96-f78c-cf3f",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {"name": "Effect", "$text": "+4 Will for one Will roll", "typeId": "e708-8a98-c786-d94d"},
+          {"name": "When to Declare", "$text": "Before the roll is made", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
+      },
+      {
+        "name": "Riposte",
+        "id": "036c-6e62-e4a9-86a2",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {"name": "Effect", "$text": "+3 Fight for one attack", "typeId": "e708-8a98-c786-d94d"},
+          {"name": "When to Declare", "$text": "Before the rolls are made", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
+      },
+      {
+        "name": "Steady Hand",
+        "id": "c237-a6a2-290b-1eaf",
+        "hidden": false,
+        "typeId": "43c7-a180-0f5f-6927",
+        "typeName": "Trick of the Trade",
+        "characteristics": [
+          {"name": "Effect", "$text": "+3 Shoot for one attack", "typeId": "e708-8a98-c786-d94d"},
+          {"name": "When to Declare", "$text": "Before the rolls are made", "typeId": "8bb4-05b2-0fba-6dc3"}
+        ]
       }
     ],
     "sharedSelectionEntries": [
@@ -129,7 +233,19 @@
         ],
         "constraints": [{"id": "9b8d-e650-5e0f-4742", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
         "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 100}, {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0}],
+        "entryLinks": [
+          {
+            "name": "Experience and Levels",
+            "id": "bbe4-2fc8-014a-8ac0",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "3d05-8970-1bda-5bbf",
+            "type": "selectionEntryGroup"
+          }
+        ],
         "infoLinks": [
+          {"name": "Tricks of the Trade", "id": "87d8-5304-ed01-20dd", "hidden": false, "targetId": "2017-e9a8-5f1c-268e", "type": "profile"},
           {
             "name": "Captain",
             "id": "0161-4b2a-a3bd-f5a5",
@@ -137,91 +253,6 @@
             "targetId": "ab3f-2ac8-9201-fee1",
             "type": "profile",
             "modifiers": [
-              {
-                "field": "8610-5362-9799-a895",
-                "type": "increment",
-                "value": 1,
-                "conditions": [
-                  {
-                    "childId": "888c-af14-d16c-bd61",
-                    "childName": "+1 Move",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "scope": "parent",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "field": "dfba-f345-52aa-b3ce",
-                "type": "increment",
-                "value": 1,
-                "conditions": [
-                  {
-                    "childId": "63ff-95b6-314a-2726",
-                    "childName": "+1 Fight",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "scope": "parent",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "field": "5ad6-ff62-d51a-99ff",
-                "type": "increment",
-                "value": 1,
-                "conditions": [
-                  {
-                    "childId": "bc2f-6968-901f-694a",
-                    "childName": "+1 Shoot",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "scope": "parent",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "field": "4315-b0cf-3d0c-06da",
-                "type": "increment",
-                "value": 1,
-                "conditions": [
-                  {
-                    "childId": "9570-2ac3-e338-6b90",
-                    "childName": "+1 Will",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "scope": "parent",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "field": "25d8-276c-5e4e-565a",
-                "type": "increment",
-                "value": 2,
-                "conditions": [
-                  {
-                    "childId": "e438-d71e-e47e-c53f",
-                    "childName": "+2 Health",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "scope": "parent",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 1
-                  }
-                ]
-              },
               {
                 "field": "8610-5362-9799-a895",
                 "type": "decrement",
@@ -298,29 +329,11 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Stat Increase",
-            "id": "075b-36c8-3298-6db0",
-            "collapsible": true,
-            "hidden": false,
-            "sortIndex": 1,
-            "constraints": [
-              {"id": "e641-6c20-9b1c-e2b5-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-              {"id": "e641-6c20-9b1c-e2b5-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-            ],
-            "entryLinks": [
-              {"name": "+1 Fight", "id": "f34a-d993-2270-5ae7", "hidden": false, "import": true, "sortIndex": 2, "targetId": "63ff-95b6-314a-2726", "type": "selectionEntry"},
-              {"name": "+1 Move", "id": "888c-af14-d16c-bd61", "hidden": false, "import": true, "sortIndex": 1, "targetId": "7ad6-95cc-b51c-1806", "type": "selectionEntry"},
-              {"name": "+1 Shoot", "id": "5b4d-142c-79cd-21ea", "hidden": false, "import": true, "sortIndex": 3, "targetId": "bc2f-6968-901f-694a", "type": "selectionEntry"},
-              {"name": "+1 Will", "id": "d6fd-1c96-76ff-503f", "hidden": false, "import": true, "sortIndex": 4, "targetId": "9570-2ac3-e338-6b90", "type": "selectionEntry"},
-              {"name": "+2 Health", "id": "24ab-0eb5-f6ef-9670", "hidden": false, "import": true, "sortIndex": 5, "targetId": "e438-d71e-e47e-c53f", "type": "selectionEntry"}
-            ]
-          },
-          {
             "name": "Captain Equipment",
             "id": "5185-8d83-7e2a-4d50",
             "collapsible": true,
             "hidden": false,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "constraints": [{"id": "7860-c789-1259-89a6", "field": "002c-4fdb-9046-f296", "includeChildSelections": true, "scope": "parent", "shared": true, "type": "max", "value": 5}],
             "selectionEntryGroups": [
               {
@@ -603,8 +616,28 @@
             "name": "Tricks of the Trade",
             "id": "3c6e-8512-e5b4-6120",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 4,
             "constraints": [{"id": "4251-c191-c054-eff0", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "modifiers": [
+              {
+                "field": "4251-c191-c054-eff0",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "6c92-496c-8be4-9223",
+                    "childName": "Tricks of the Trade",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ],
             "selectionEntries": [
               {
                 "name": "Furious Attack",
@@ -621,7 +654,7 @@
                 "id": "1b01-4438-6017-3d09",
                 "hidden": false,
                 "import": true,
-                "sortIndex": 2,
+                "sortIndex": 10,
                 "type": "upgrade",
                 "constraints": [{"id": "9e37-1bcd-cde9-f958", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "infoLinks": [{"name": "Sprint", "id": "94bb-8b69-8262-266c", "hidden": false, "targetId": "18ac-7856-128e-93b2", "type": "profile"}]
@@ -631,10 +664,153 @@
                 "id": "6dfd-e4d7-9c33-97dd",
                 "hidden": false,
                 "import": true,
-                "sortIndex": 3,
+                "sortIndex": 11,
                 "type": "upgrade",
                 "constraints": [{"id": "9966-2c70-ffb3-858d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "infoLinks": [{"name": "Leadership", "id": "bcda-f008-7879-340f", "hidden": false, "targetId": "d11f-f01f-851c-42ae", "type": "profile"}]
+              },
+              {
+                "name": "Riposte",
+                "id": "679d-2c2d-7517-93ef",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "upgrade",
+                "constraints": [{"id": "9d98-391a-0adc-c972", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Riposte", "id": "3f9a-3a7e-5715-703c", "hidden": false, "targetId": "036c-6e62-e4a9-86a2", "type": "profile"}]
+              },
+              {
+                "name": "Coup de Grâce",
+                "id": "da33-0b62-10e9-fa9a",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 3,
+                "type": "upgrade",
+                "constraints": [{"id": "d48d-7720-901f-cc70", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Coup de Grâce", "id": "2444-a17f-c96d-c27d", "hidden": false, "targetId": "c5b5-022a-e904-1890", "type": "profile"}]
+              },
+              {
+                "name": "Steady Hand",
+                "id": "ddf6-302c-9a20-d7c8",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 4,
+                "type": "upgrade",
+                "constraints": [{"id": "17ee-93ce-a747-c0dd", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Steady Hand", "id": "badd-a440-66c8-de10", "hidden": false, "targetId": "c237-a6a2-290b-1eaf", "type": "profile"}]
+              },
+              {
+                "name": "Dead Eye",
+                "id": "9915-2f81-b488-9c85",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 5,
+                "type": "upgrade",
+                "constraints": [{"id": "b64e-0a2e-077a-315d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Dead Eye", "id": "78bc-6af5-8d76-6bea", "hidden": false, "targetId": "4ce0-903f-3199-8d20", "type": "profile"}]
+              },
+              {
+                "name": "Brace",
+                "id": "3b4c-d235-9922-3cca",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 6,
+                "type": "upgrade",
+                "constraints": [{"id": "d73a-9b7c-1d61-26ea", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Brace", "id": "0e2c-1051-93e8-20ad", "hidden": false, "targetId": "6d2b-9e8d-d0e4-51c2", "type": "profile"}]
+              },
+              {
+                "name": "Dodge",
+                "id": "ce77-b6b6-5383-4099",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 7,
+                "type": "upgrade",
+                "constraints": [{"id": "7e5e-8e0f-a887-e807", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Dodge", "id": "4d5b-2493-c60a-5a92", "hidden": false, "targetId": "1f44-6b28-486c-6bb0", "type": "profile"}]
+              },
+              {
+                "name": "Nerves of Steel",
+                "id": "7e84-5f45-6f36-8e48",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 8,
+                "type": "upgrade",
+                "constraints": [{"id": "eaad-727e-7840-c672", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Nerves of Steel", "id": "b5d2-dc87-1622-1a65", "hidden": false, "targetId": "927a-5d96-f78c-cf3f", "type": "profile"}]
+              },
+              {
+                "name": "Iron Heart",
+                "id": "f49f-79c6-ecf4-2f3b",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 9,
+                "type": "upgrade",
+                "constraints": [{"id": "8a67-00ff-c400-34c3", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Iron Heart", "id": "b1c4-e073-13d9-3871", "hidden": false, "targetId": "e521-aeb9-48d2-66bd", "type": "profile"}]
+              }
+            ]
+          },
+          {
+            "name": "Starting Stat Improvement",
+            "id": "fc87-b760-1f0e-8382",
+            "collapsible": true,
+            "hidden": false,
+            "sortIndex": 2,
+            "constraints": [
+              {"id": "cb77-3d9d-6266-db90", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1},
+              {"id": "3d9a-df34-a60e-879f", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1}
+            ],
+            "entryLinks": [
+              {
+                "name": "+1 Fight",
+                "id": "220b-19d0-3d65-eceb",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "targetId": "63ff-95b6-314a-2726",
+                "type": "selectionEntry",
+                "costs": [{"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 1}]
+              },
+              {
+                "name": "+1 Move",
+                "id": "b5ae-025f-28b3-5a6a",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "targetId": "7ad6-95cc-b51c-1806",
+                "type": "selectionEntry",
+                "costs": [{"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 1}]
+              },
+              {
+                "name": "+1 Shoot",
+                "id": "1d4d-491d-8df8-3433",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 3,
+                "targetId": "bc2f-6968-901f-694a",
+                "type": "selectionEntry",
+                "costs": [{"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 1}]
+              },
+              {
+                "name": "+1 Will",
+                "id": "9dad-fd0a-4e8d-88ef",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 4,
+                "targetId": "9570-2ac3-e338-6b90",
+                "type": "selectionEntry",
+                "costs": [{"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 1}]
+              },
+              {
+                "name": "+2 Health",
+                "id": "8276-f093-a4a9-fa74",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 5,
+                "targetId": "e438-d71e-e47e-c53f",
+                "type": "selectionEntry",
+                "costs": [{"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 1}]
               }
             ]
           }

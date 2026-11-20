@@ -9,11 +9,17 @@
     "revision": 1,
     "type": "catalogue",
     "categoryEntries": [{"name": "Campaign", "id": "2921-b7da-80b7-3bbc", "hidden": false}],
-    "costTypes": [{"name": "Wizard Experience", "id": "a92e-f1c9-6aa7-8c9b", "defaultCostLimit": -1, "hidden": false}],
+    "costTypes": [
+      {"name": "Wizard Experience", "id": "a92e-f1c9-6aa7-8c9b", "defaultCostLimit": -1, "hidden": false},
+      {"name": "Wizard Level", "id": "9ea2-3385-d4da-a8b3", "defaultCostLimit": -1, "hidden": true},
+      {"name": "Captain Experience", "id": "14af-599a-768c-f8e1", "defaultCostLimit": -1, "hidden": false},
+      {"name": "Captain Level", "id": "b3df-034f-98cc-ccb3", "defaultCostLimit": -1, "hidden": true}
+    ],
     "entryLinks": [
       {"name": "Stash", "id": "fb7a-21d9-2747-4263", "hidden": false, "import": true, "sortIndex": 1, "targetId": "3ffc-e82d-b35b-9d54", "type": "selectionEntry"},
       {"name": "Base", "id": "5b30-8189-b0cf-e932", "hidden": false, "import": true, "sortIndex": 2, "targetId": "0c1e-35e6-9fea-e6c8", "type": "selectionEntry"},
-      {"name": "Games", "id": "a81d-3454-7652-6321", "hidden": false, "import": true, "targetId": "41e3-0078-7eb7-e70b", "type": "selectionEntry"}
+      {"name": "Games", "id": "a81d-3454-7652-6321", "hidden": false, "import": true, "targetId": "41e3-0078-7eb7-e70b", "type": "selectionEntry"},
+      {"name": "Show Campaign", "id": "2f68-de1a-411b-be06", "hidden": false, "import": true, "targetId": "6779-5a12-5430-0683", "type": "selectionEntry"}
     ],
     "sharedSelectionEntries": [
       {
@@ -78,16 +84,13 @@
         "selectionEntries": [{"name": "New Entry", "id": "9cfa-e64e-3338-db44", "hidden": false, "import": true, "type": "upgrade"}]
       },
       {
-        "name": "Level",
-        "id": "1752-2a2d-679b-0168",
+        "name": "Show Campaign",
+        "id": "6779-5a12-5430-0683",
         "hidden": false,
         "import": true,
         "type": "upgrade",
-        "costs": [
-          {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
-          {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
-          {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": -100}
-        ]
+        "categoryLinks": [{"name": "Configuration", "id": "51d2-8c2e-90f6-f8ba", "hidden": false, "primary": true, "targetId": "a7f7-a7e7-379c-aa0f"}],
+        "constraints": [{"id": "257a-0278-216f-eadb", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}]
       }
     ],
     "sharedSelectionEntryGroups": [
@@ -290,13 +293,232 @@
           }
         ]
       },
-      {"name": "Captain Experience", "id": "3d05-8970-1bda-5bbf", "hidden": false},
+      {
+        "name": "Experience and Levels",
+        "id": "3d05-8970-1bda-5bbf",
+        "collapsible": true,
+        "comment": "Captain",
+        "hidden": false,
+        "constraints": [{"id": "6a9c-83ec-ad4b-1241", "field": "b3df-034f-98cc-ccb3", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+        "modifiers": [
+          {
+            "field": "6a9c-83ec-ad4b-1241",
+            "type": "increment",
+            "value": 1,
+            "repeats": [
+              {
+                "childId": "c201-c34f-8e89-5954",
+                "childName": "Captain Level",
+                "field": "selections",
+                "includeChildSelections": true,
+                "repeats": 1,
+                "roundUp": false,
+                "scope": "parent",
+                "shared": true,
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Captain Level",
+            "id": "c201-c34f-8e89-5954",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "type": "upgrade",
+            "costs": [
+              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 0},
+              {"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 0},
+              {"name": "Captain Experience", "typeId": "14af-599a-768c-f8e1", "value": -100},
+              {"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 0}
+            ]
+          },
+          {
+            "name": "Tricks of the Trade",
+            "id": "6c92-496c-8be4-9223",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [
+              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 0},
+              {"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 0},
+              {"name": "Captain Experience", "typeId": "14af-599a-768c-f8e1", "value": 0},
+              {"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 1}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Stat Improvements",
+            "id": "075b-36c8-3298-6db0",
+            "hidden": false,
+            "sortIndex": 2,
+            "entryLinks": [
+              {
+                "name": "+1 Health",
+                "id": "4790-3047-2bcb-8d1a",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "targetId": "3730-b6cd-a271-7365",
+                "type": "selectionEntry",
+                "constraints": [{"id": "00f3-5d26-9b3a-964b", "field": "selections", "scope": "group", "shared": true, "type": "max", "value": 2}],
+                "costs": [{"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 1}]
+              },
+              {
+                "name": "+1 Will",
+                "id": "1227-0f4b-26b9-13aa",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "targetId": "9570-2ac3-e338-6b90",
+                "type": "selectionEntry",
+                "constraints": [{"id": "e23c-324c-5015-16ca", "field": "selections", "scope": "group", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 1}]
+              }
+            ]
+          }
+        ]
+      },
       {
         "name": "Treasure",
         "id": "9b45-54ce-0dd8-4960",
         "collapsible": true,
         "hidden": false,
         "entryLinks": [{"name": "Treasure", "id": "9225-d8d6-deda-a17a", "hidden": false, "import": true, "targetId": "2832-7923-98f3-a8cd", "type": "selectionEntry"}]
+      },
+      {
+        "name": "Experience and Levels",
+        "id": "c485-b130-39f9-9bf1",
+        "collapsible": true,
+        "comment": "Wizard",
+        "hidden": false,
+        "constraints": [{"id": "0b6c-8817-9f19-67ec", "field": "9ea2-3385-d4da-a8b3", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+        "modifiers": [
+          {
+            "field": "0b6c-8817-9f19-67ec",
+            "type": "increment",
+            "value": 1,
+            "repeats": [
+              {
+                "childId": "1752-2a2d-679b-0168",
+                "childName": "Level",
+                "field": "selections",
+                "includeChildSelections": true,
+                "repeats": 1,
+                "roundUp": false,
+                "scope": "parent",
+                "shared": true,
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Wizard Level",
+            "id": "1752-2a2d-679b-0168",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "type": "upgrade",
+            "costs": [
+              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": -100}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Stat Improvements",
+            "id": "eecd-5d77-2383-921f",
+            "hidden": false,
+            "sortIndex": 2,
+            "entryLinks": [
+              {
+                "name": "+1 Fight",
+                "id": "38f4-f2bb-a1d5-5eb6",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "targetId": "63ff-95b6-314a-2726",
+                "type": "selectionEntry",
+                "costs": [{"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 1}]
+              },
+              {
+                "name": "+1 Shoot",
+                "id": "5714-89d1-6532-08fd",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 3,
+                "targetId": "bc2f-6968-901f-694a",
+                "type": "selectionEntry",
+                "costs": [{"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 1}]
+              },
+              {
+                "name": "+1 Will",
+                "id": "ffdc-7306-060e-1ece",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 4,
+                "targetId": "9570-2ac3-e338-6b90",
+                "type": "selectionEntry",
+                "costs": [{"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 1}]
+              },
+              {
+                "name": "+1 Health",
+                "id": "9b86-5ebd-1f15-a408",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 5,
+                "targetId": "3730-b6cd-a271-7365",
+                "type": "selectionEntry",
+                "costs": [{"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 1}]
+              }
+            ]
+          },
+          {
+            "name": "Spell Improvements",
+            "id": "8d8d-bb44-a0b9-0caa",
+            "hidden": false,
+            "sortIndex": 3,
+            "selectionEntries": [
+              {
+                "name": "Spell Improvement",
+                "id": "e14e-dc0c-e0d5-01de",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "associations": [
+                  {
+                    "name": "Spell",
+                    "id": "1896-b373-0088-96e6",
+                    "childId": "44bb-ed77-f0d4-e529",
+                    "childName": "Spells",
+                    "includeChildSelections": true,
+                    "max": 1,
+                    "min": 1,
+                    "scope": "force"
+                  }
+                ],
+                "costs": [
+                  {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+                  {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+                  {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 0},
+                  {"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 1}
+                ],
+                "modifiers": [{"affects": "self.entries.associations.profiles.Spell", "field": "58ac-2774-9f17-eabf", "type": "decrement", "value": 1}]
+              }
+            ]
+          }
+        ]
       }
     ]
   }
