@@ -43,7 +43,6 @@
       {"name": "Archer", "id": "58da-c008-2132-03b1", "hidden": false, "import": true, "targetId": "5278-f869-3f7f-d1f8", "type": "selectionEntry"},
       {"name": "Thief", "id": "5b26-290e-afc7-79ee", "hidden": false, "import": true, "targetId": "d5dd-ae5a-347b-a0b3", "type": "selectionEntry"},
       {"name": "Thug", "id": "cbf0-a875-ec87-8420", "hidden": false, "import": true, "targetId": "98d7-4f13-c7ad-7fed", "type": "selectionEntry"},
-      {"name": "Apprentice", "id": "9a69-9ffc-2a76-e777", "hidden": false, "import": true, "targetId": "8ce8-8483-653b-9d83", "type": "selectionEntry"},
       {"name": "Spellbook", "id": "41ea-c1cb-f2c0-7cb2", "hidden": false, "import": true, "targetId": "f819-eb35-37f4-11df", "type": "selectionEntry"},
       {"name": "Apothecary", "id": "fb37-4c82-bb25-c9fd", "hidden": false, "import": true, "targetId": "d93b-171a-fc1f-6c91", "type": "selectionEntry"},
       {"name": "Barbarian", "id": "8971-6bdf-1b48-716f", "hidden": false, "import": true, "targetId": "bdad-381c-8d08-001f", "type": "selectionEntry"},
@@ -7968,121 +7967,6 @@
           {"name": "Light Armour", "id": "ee96-dfa8-71b4-31d7", "hidden": false, "targetId": "93fb-2683-4918-018c", "type": "profile"},
           {"name": "Dagger", "id": "9943-a1ea-a1cf-ec6d", "hidden": false, "targetId": "6744-d3a4-60c1-5944", "type": "profile"},
           {"name": "Quiver", "id": "8429-3fca-00a6-2303", "hidden": false, "targetId": "5463-ffd8-4a63-ab0e", "type": "profile"}
-        ]
-      },
-      {
-        "name": "Apprentice",
-        "id": "8ce8-8483-653b-9d83",
-        "hidden": false,
-        "import": true,
-        "type": "model",
-        "categoryLinks": [{"name": "Apprentice", "id": "b351-fedb-26c9-27c9", "hidden": false, "primary": true, "targetId": "8fff-2d5e-cbae-f80c"}],
-        "constraints": [
-          {
-            "id": "bf15-fe90-8aa4-1ede",
-            "field": "selections",
-            "includeChildForces": true,
-            "includeChildSelections": true,
-            "scope": "force",
-            "shared": true,
-            "type": "max",
-            "value": 1
-          }
-        ],
-        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 100}],
-        "entryLinks": [
-          {
-            "name": "Equipment",
-            "id": "5162-22dd-ebe4-ae52",
-            "hidden": false,
-            "import": true,
-            "targetId": "7a5e-6033-eeee-3f2c",
-            "type": "selectionEntryGroup",
-            "constraints": [{"id": "7f4a-0afe-6402-9b8d", "field": "002c-4fdb-9046-f296", "scope": "parent", "shared": true, "type": "max", "value": 4}]
-          }
-        ],
-        "infoLinks": [
-          {
-            "name": "Apprentice",
-            "id": "0d4f-64b9-f1ae-22a0",
-            "hidden": false,
-            "targetId": "72ef-6247-c921-dc63",
-            "type": "profile",
-            "modifiers": [
-              {
-                "field": "5ad6-ff62-d51a-99ff",
-                "type": "increment",
-                "value": 1,
-                "repeats": [
-                  {
-                    "childId": "bc2f-6968-901f-694a",
-                    "childName": "+1 Shoot",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "repeats": 1,
-                    "roundUp": false,
-                    "scope": "6162-1a30-2c5f-5ca6",
-                    "shared": true,
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "field": "dfba-f345-52aa-b3ce",
-                "type": "increment",
-                "value": 1,
-                "repeats": [
-                  {
-                    "childId": "63ff-95b6-314a-2726",
-                    "childName": "+1 Fight",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "repeats": 1,
-                    "roundUp": false,
-                    "scope": "6162-1a30-2c5f-5ca6",
-                    "shared": true,
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "field": "4315-b0cf-3d0c-06da",
-                "type": "increment",
-                "value": 1,
-                "repeats": [
-                  {
-                    "childId": "9570-2ac3-e338-6b90",
-                    "childName": "+1 Will",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "repeats": 1,
-                    "roundUp": false,
-                    "scope": "6162-1a30-2c5f-5ca6",
-                    "shared": true,
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "field": "25d8-276c-5e4e-565a",
-                "type": "increment",
-                "value": 1,
-                "repeats": [
-                  {
-                    "childId": "3730-b6cd-a271-7365",
-                    "childName": "+1 Health",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "repeats": 1,
-                    "roundUp": false,
-                    "scope": "6162-1a30-2c5f-5ca6",
-                    "shared": true,
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          }
         ]
       },
       {

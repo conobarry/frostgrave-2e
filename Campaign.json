@@ -554,6 +554,7 @@
                 "sortIndex": 2,
                 "targetId": "63ff-95b6-314a-2726",
                 "type": "selectionEntry",
+                "constraints": [{"id": "62de-0058-d646-4500", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 3}],
                 "costs": [{"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 1}]
               },
               {
@@ -564,6 +565,7 @@
                 "sortIndex": 3,
                 "targetId": "bc2f-6968-901f-694a",
                 "type": "selectionEntry",
+                "constraints": [{"id": "8c0d-0d2d-37ef-41f8", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 5}],
                 "costs": [{"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 1}]
               },
               {
@@ -574,6 +576,7 @@
                 "sortIndex": 4,
                 "targetId": "9570-2ac3-e338-6b90",
                 "type": "selectionEntry",
+                "constraints": [{"id": "ae97-bc4d-7aed-7abe", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 4}],
                 "costs": [{"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 1}]
               },
               {
@@ -584,6 +587,7 @@
                 "sortIndex": 5,
                 "targetId": "3730-b6cd-a271-7365",
                 "type": "selectionEntry",
+                "constraints": [{"id": "70d5-aa8f-0344-9579", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 6}],
                 "costs": [{"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 1}]
               }
             ]
@@ -635,6 +639,7 @@
             "id": "8bd9-208f-9264-3426",
             "hidden": false,
             "import": true,
+            "sortIndex": 1,
             "type": "upgrade",
             "constraints": [{"id": "c4a5-5474-89ef-f828", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
             "modifiers": [
@@ -681,6 +686,7 @@
             "id": "fae7-6211-77db-c978",
             "hidden": false,
             "import": true,
+            "sortIndex": 2,
             "type": "upgrade",
             "constraints": [{"id": "290f-6187-e290-6075", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
             "modifiers": [
@@ -727,6 +733,7 @@
             "id": "800f-bb96-5c3c-8993",
             "hidden": false,
             "import": true,
+            "sortIndex": 3,
             "type": "upgrade",
             "constraints": [{"id": "6648-852c-b054-2bba", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
             "modifiers": [
@@ -773,6 +780,7 @@
             "id": "07f7-d08f-7729-1578",
             "hidden": false,
             "import": true,
+            "sortIndex": 4,
             "type": "upgrade",
             "constraints": [{"id": "3647-8ea5-2072-6001", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
             "modifiers": [
@@ -808,6 +816,175 @@
                   {
                     "name": "Description",
                     "$text": "The spellcaster has lost one or more fingers and suffers a permanent -1 Shoot penalty. This injury can be received twice, with a cumulative effect of -2 Shoot. Any further Lost Fingers results must be re-rolled.",
+                    "typeId": "cbfc-30ca-67ac-436d"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Never Quite as Strong",
+            "id": "e8b9-7fb6-6e13-2648",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 5,
+            "type": "upgrade",
+            "constraints": [{"id": "7ebe-af69-3de8-de83", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "modifiers": [
+              {
+                "affects": "self.entries.profiles.Figure",
+                "field": "25d8-276c-5e4e-565a",
+                "position": "",
+                "scope": "parent",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "e8b9-7fb6-6e13-2648",
+                    "childName": "Never Quite as Strong",
+                    "field": "selections",
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "profiles": [
+              {
+                "name": "Never Quite as Strong",
+                "id": "fde5-3956-1ef9-6dc5",
+                "hidden": false,
+                "typeId": "3765-1a88-249c-c438",
+                "typeName": "Injury",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "Due to internal injuries, the spellcaster never quite returns to full Health and starts every game at -1 Health. This injury can be received twice, with a cumulative effect of -2 Health. Any further Never Quite as Strong results must be re-rolled",
+                    "typeId": "cbfc-30ca-67ac-436d"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Psychological Scars",
+            "id": "3cd2-fd79-f4a1-c3f3",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 6,
+            "type": "upgrade",
+            "constraints": [{"id": "6b75-4cdf-8833-af00", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "modifiers": [
+              {
+                "affects": "self.entries.profiles.Figure",
+                "field": "4315-b0cf-3d0c-06da",
+                "position": "",
+                "scope": "parent",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "3cd2-fd79-f4a1-c3f3",
+                    "childName": "Psychological Scars",
+                    "field": "selections",
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "profiles": [
+              {
+                "name": "Psychological Scars",
+                "id": "652f-9f01-99b7-7176",
+                "hidden": false,
+                "typeId": "3765-1a88-249c-c438",
+                "typeName": "Injury",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "The spellcaster’s physical injuries fully heal, but the mental trauma remains, causing a permanent -1 Will penalty. This injury can be received twice, with a cumulative effect of -2 Will. Any further Psychological Scars results must be rerolled.",
+                    "typeId": "cbfc-30ca-67ac-436d"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Niggling Injury",
+            "id": "c082-c88c-374c-c7e8",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 7,
+            "type": "upgrade",
+            "constraints": [{"id": "6476-9edb-c661-a1a9", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "profiles": [
+              {
+                "name": "Niggling Injury",
+                "id": "a340-2bb9-d975-eacd",
+                "hidden": false,
+                "typeId": "3765-1a88-249c-c438",
+                "typeName": "Injury",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "The spellcaster’s injury just never quite heals, and they are forced to use herbs, ointments, or minor magic to keep the pain at bay. The spellcaster must spend 30gc on these treatments before each game or start each game at -3 Health. This injury can be received twice – in which case the payment increases to 40gc and the penalty to -4 Health. Any further Niggling Injury results must be re-rolled. A 10gc discount applies to these payments for each apothecary in the warband.",
+                    "typeId": "cbfc-30ca-67ac-436d"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Smashed Jaw",
+            "id": "2dd8-9c47-ef33-590a",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 8,
+            "type": "upgrade",
+            "constraints": [{"id": "9043-5756-b9d6-2ce7", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "profiles": [
+              {
+                "name": "Smashed Jaw",
+                "id": "8ef5-8983-e088-4fdc",
+                "hidden": false,
+                "typeId": "3765-1a88-249c-c438",
+                "typeName": "Injury",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "The spellcaster suffered a broken jaw that never quite healed properly. The spellcaster has some difficulty with speaking, which affects their ability to lead their warband. Whenever this figure activates, it can only activate a maximum of two soldiers in its phase (instead of the normal three). So, an apprentice with a Smashed Jaw could only activate two soldiers in the Apprentice phase. If this injury is received a second time, the number of soldiers that may also activate in the phase is decreased to one. Any further Smashed Jaw results must be re-rolled.",
+                    "typeId": "cbfc-30ca-67ac-436d"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lost Eye",
+            "id": "36cd-da7d-5adc-09b1",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 9,
+            "type": "upgrade",
+            "constraints": [{"id": "3843-161a-d0ef-999d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "profiles": [
+              {
+                "name": "Lost Eye",
+                "id": "d044-52ed-dcc2-ad50",
+                "hidden": false,
+                "typeId": "3765-1a88-249c-c438",
+                "typeName": "Injury",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "One of the figure’s eyes has been damaged and rendered useless. It suffers a -1 to its Combat Roll whenever it is the target of a shooting attack. If a spellcaster receives two Lost Eye permanent injuries, they are effectively blind. If the warband’s wizard fails to successfully cast Miraculous Cure (page 126) to remove permanent injuries (note that a wizard may cast this spell on themselves or on their apprentice) in the following Out of Game spells step of the post-game sequence, the spellcaster must retire from exploring Frostgrave and is considered ‘dead’ for game purposes.",
                     "typeId": "cbfc-30ca-67ac-436d"
                   }
                 ]

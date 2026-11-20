@@ -12,7 +12,10 @@
       {"name": "Sellsword", "id": "49c5-a2f3-1a00-93ae", "importRootEntries": true, "targetId": "bf36-ab70-4e59-f5c7", "type": "catalogue"},
       {"name": "Campaign", "id": "460a-c8a8-78bd-65fc", "importRootEntries": true, "targetId": "1417-89c4-f679-60d8", "type": "catalogue"}
     ],
-    "entryLinks": [{"name": "Wizard", "id": "d8e0-9007-9c54-ddf7", "hidden": false, "import": true, "targetId": "e22d-8161-dda1-529d", "type": "selectionEntry"}],
+    "entryLinks": [
+      {"name": "Wizard", "id": "d8e0-9007-9c54-ddf7", "hidden": false, "import": true, "targetId": "e22d-8161-dda1-529d", "type": "selectionEntry"},
+      {"name": "Apprentice", "id": "e621-63b2-8564-f2ac", "hidden": false, "import": true, "targetId": "8ce8-8483-653b-9d83", "type": "selectionEntry"}
+    ],
     "forceEntries": [
       {
         "name": "Warband",
@@ -220,6 +223,131 @@
                     "scope": "force",
                     "shared": true,
                     "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Apprentice",
+        "id": "8ce8-8483-653b-9d83",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [{"name": "Apprentice", "id": "b351-fedb-26c9-27c9", "hidden": false, "primary": true, "targetId": "8fff-2d5e-cbae-f80c"}],
+        "constraints": [
+          {
+            "id": "bf15-fe90-8aa4-1ede",
+            "field": "selections",
+            "includeChildForces": true,
+            "includeChildSelections": true,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 100}],
+        "entryLinks": [
+          {
+            "name": "Equipment",
+            "id": "5162-22dd-ebe4-ae52",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "7a5e-6033-eeee-3f2c",
+            "type": "selectionEntryGroup",
+            "constraints": [{"id": "7f4a-0afe-6402-9b8d", "field": "002c-4fdb-9046-f296", "scope": "parent", "shared": true, "type": "max", "value": 4}]
+          },
+          {
+            "name": "Permanent Injuries",
+            "id": "9432-6e75-b5ad-428b",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "24d7-4ade-3905-9ac5",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Apprentice",
+            "id": "0d4f-64b9-f1ae-22a0",
+            "hidden": false,
+            "targetId": "72ef-6247-c921-dc63",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "5ad6-ff62-d51a-99ff",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "bc2f-6968-901f-694a",
+                    "childName": "+1 Shoot",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "6162-1a30-2c5f-5ca6",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "dfba-f345-52aa-b3ce",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "63ff-95b6-314a-2726",
+                    "childName": "+1 Fight",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "6162-1a30-2c5f-5ca6",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "4315-b0cf-3d0c-06da",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "9570-2ac3-e338-6b90",
+                    "childName": "+1 Will",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "6162-1a30-2c5f-5ca6",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "25d8-276c-5e4e-565a",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "3730-b6cd-a271-7365",
+                    "childName": "+1 Health",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "6162-1a30-2c5f-5ca6",
+                    "shared": true,
                     "value": 1
                   }
                 ]
