@@ -615,6 +615,7 @@
           {
             "name": "Tricks of the Trade",
             "id": "3c6e-8512-e5b4-6120",
+            "collapsible": true,
             "hidden": false,
             "sortIndex": 4,
             "constraints": [{"id": "4251-c191-c054-eff0", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],

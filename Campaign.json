@@ -10,10 +10,62 @@
     "type": "catalogue",
     "categoryEntries": [{"name": "Campaign", "id": "2921-b7da-80b7-3bbc", "hidden": false}, {"name": "Badly Wounded", "id": "9e8a-a70e-05ce-ab5c", "hidden": false}],
     "costTypes": [
-      {"name": "Wizard Experience", "id": "a92e-f1c9-6aa7-8c9b", "defaultCostLimit": -1, "hidden": false},
-      {"name": "Wizard Level", "id": "9ea2-3385-d4da-a8b3", "defaultCostLimit": -1, "hidden": true},
-      {"name": "Captain Experience", "id": "14af-599a-768c-f8e1", "defaultCostLimit": -1, "hidden": false},
-      {"name": "Captain Level", "id": "b3df-034f-98cc-ccb3", "defaultCostLimit": -1, "hidden": true}
+      {
+        "name": "Wizard Exp",
+        "id": "a92e-f1c9-6aa7-8c9b",
+        "defaultCostLimit": -1,
+        "hidden": true,
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": false,
+            "conditions": [{"childId": "roster", "childName": "roster", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf"}]
+          }
+        ]
+      },
+      {
+        "name": "Wizard Level",
+        "id": "9ea2-3385-d4da-a8b3",
+        "defaultCostLimit": -1,
+        "hidden": true,
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": false,
+            "conditions": [{"childId": "roster", "childName": "roster", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ]
+      },
+      {
+        "name": "Captain Exp",
+        "id": "14af-599a-768c-f8e1",
+        "defaultCostLimit": -1,
+        "hidden": true,
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": false,
+            "conditions": [{"childId": "roster", "childName": "roster", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ]
+      },
+      {
+        "name": "Captain Level",
+        "id": "b3df-034f-98cc-ccb3",
+        "defaultCostLimit": -1,
+        "hidden": true,
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": false,
+            "conditions": [{"childId": "roster", "childName": "roster", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ]
+      }
     ],
     "entryLinks": [
       {"name": "Stash", "id": "fb7a-21d9-2747-4263", "hidden": false, "import": true, "sortIndex": 1, "targetId": "3ffc-e82d-b35b-9d54", "type": "selectionEntry"},
