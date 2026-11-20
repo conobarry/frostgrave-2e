@@ -636,6 +636,29 @@
             "hidden": false,
             "import": true,
             "type": "upgrade",
+            "constraints": [{"id": "c4a5-5474-89ef-f828", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "modifiers": [
+              {
+                "affects": "self.entries.profiles.Figure",
+                "field": "8610-5362-9799-a895",
+                "position": "",
+                "scope": "parent",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "8bd9-208f-9264-3426",
+                    "childName": "Lost Toes",
+                    "field": "selections",
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ],
             "profiles": [
               {
                 "name": "Lost Toes",
@@ -649,8 +672,7 @@
                     "$text": "The spellcaster has lost one or more toes and suffers a permanent -1 penalty to all Move Rolls. This injury can be received twice, with a cumulative effect of -2 to all Move Rolls. Any further Lost Toes results must be re-rolled.",
                     "typeId": "cbfc-30ca-67ac-436d"
                   }
-                ],
-                "modifiers": [{"affects": "profiles.Figure", "field": "8610-5362-9799-a895", "type": "append", "value": " / "}]
+                ]
               }
             ]
           },
@@ -660,6 +682,29 @@
             "hidden": false,
             "import": true,
             "type": "upgrade",
+            "constraints": [{"id": "290f-6187-e290-6075", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "modifiers": [
+              {
+                "affects": "self.entries.profiles.Figure",
+                "field": "8610-5362-9799-a895",
+                "position": "",
+                "scope": "parent",
+                "type": "decrement",
+                "value": 2,
+                "repeats": [
+                  {
+                    "childId": "fae7-6211-77db-c978",
+                    "childName": "Smashed Leg",
+                    "field": "selections",
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ],
             "profiles": [
               {
                 "name": "Smashed Leg",
@@ -683,6 +728,29 @@
             "hidden": false,
             "import": true,
             "type": "upgrade",
+            "constraints": [{"id": "6648-852c-b054-2bba", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "modifiers": [
+              {
+                "affects": "self.entries.profiles.Figure",
+                "field": "dfba-f345-52aa-b3ce",
+                "position": "",
+                "scope": "parent",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "800f-bb96-5c3c-8993",
+                    "childName": "Crushed Arm",
+                    "field": "selections",
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ],
             "profiles": [
               {
                 "name": "Crushed Arm",
@@ -706,6 +774,29 @@
             "hidden": false,
             "import": true,
             "type": "upgrade",
+            "constraints": [{"id": "3647-8ea5-2072-6001", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "modifiers": [
+              {
+                "affects": "self.entries.profiles.Figure",
+                "field": "5ad6-ff62-d51a-99ff",
+                "position": "",
+                "scope": "parent",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "07f7-d08f-7729-1578",
+                    "childName": "Lost Fingers",
+                    "field": "selections",
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ],
             "profiles": [
               {
                 "name": "Lost Fingers",

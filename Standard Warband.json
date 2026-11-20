@@ -162,7 +162,7 @@
             "constraints": [{"id": "6c21-aff5-50ce-198a", "field": "002c-4fdb-9046-f296", "scope": "parent", "shared": true, "type": "max", "value": 5}]
           },
           {
-            "name": "Experience and Level",
+            "name": "Experience and Levels",
             "id": "f51c-d9ed-4a30-c6a9",
             "hidden": false,
             "import": true,
@@ -188,6 +188,15 @@
                 ]
               }
             ]
+          },
+          {
+            "name": "Permanent Injuries",
+            "id": "8592-a6af-4df5-2dbc",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "24d7-4ade-3905-9ac5",
+            "type": "selectionEntryGroup"
           }
         ],
         "infoLinks": [

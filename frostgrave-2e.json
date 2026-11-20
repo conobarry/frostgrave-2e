@@ -22,7 +22,23 @@
       {"name": "Summoned", "id": "5569-7377-0462-d49d", "hidden": false},
       {"name": "Configuration", "id": "a7f7-a7e7-379c-aa0f", "hidden": false}
     ],
-    "costTypes": [{"name": "gc", "id": "8af7-6c9e-2277-7dc1", "defaultCostLimit": 400}, {"name": "Slots", "id": "002c-4fdb-9046-f296", "defaultCostLimit": -1, "hidden": true}],
+    "costTypes": [
+      {"name": "gc", "id": "8af7-6c9e-2277-7dc1", "defaultCostLimit": 400},
+      {
+        "name": "Slots",
+        "id": "002c-4fdb-9046-f296",
+        "defaultCostLimit": -1,
+        "hidden": true,
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": false,
+            "conditions": [{"childId": "model", "childName": "model", "field": "selections", "scope": "parent", "type": "instanceOf"}]
+          }
+        ]
+      }
+    ],
     "entryLinks": [
       {"name": "Archer", "id": "58da-c008-2132-03b1", "hidden": false, "import": true, "targetId": "5278-f869-3f7f-d1f8", "type": "selectionEntry"},
       {"name": "Thief", "id": "5b26-290e-afc7-79ee", "hidden": false, "import": true, "targetId": "d5dd-ae5a-347b-a0b3", "type": "selectionEntry"},
@@ -218,6 +234,7 @@
         "name": "Wizard",
         "id": "c42c-5984-b18a-cf70",
         "hidden": false,
+        "noindex": true,
         "typeId": "79ed-bd4a-1464-5726",
         "typeName": "Figure",
         "characteristics": [
@@ -7860,6 +7877,7 @@
         "id": "4198-0038-7d2f-251c",
         "description": "This creature does +2 damage.",
         "hidden": false,
+        "noindex": false,
         "page": "197",
         "publicationId": "aa94-68df-16ee-0a61"
       },
