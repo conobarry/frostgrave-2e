@@ -8970,7 +8970,8 @@
             "import": true,
             "type": "upgrade",
             "constraints": [{"id": "fe6c-fb0d-506f-1328", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
-            "infoLinks": [{"name": "Animal Companion", "id": "eed4-5f5e-4078-bf21", "hidden": false, "targetId": "32d0-fde5-f726-f55a", "type": "profile"}]
+            "infoLinks": [{"name": "Animal Companion", "id": "eed4-5f5e-4078-bf21", "hidden": false, "targetId": "32d0-fde5-f726-f55a", "type": "profile"}],
+            "modifiers": [{"affects": "self.entries.8fff-2d5e-cbae-f80c", "field": "add-info", "scope": "force", "type": "add", "value": "32d0-fde5-f726-f55a"}]
           },
           {
             "name": "Brew Potion",

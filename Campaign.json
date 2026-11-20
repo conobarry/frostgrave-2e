@@ -8,7 +8,7 @@
     "library": true,
     "revision": 1,
     "type": "catalogue",
-    "categoryEntries": [{"name": "Campaign", "id": "2921-b7da-80b7-3bbc", "hidden": false}],
+    "categoryEntries": [{"name": "Campaign", "id": "2921-b7da-80b7-3bbc", "hidden": false}, {"name": "Badly Wounded", "id": "9e8a-a70e-05ce-ab5c", "hidden": false}],
     "costTypes": [
       {"name": "Wizard Experience", "id": "a92e-f1c9-6aa7-8c9b", "defaultCostLimit": -1, "hidden": false},
       {"name": "Wizard Level", "id": "9ea2-3385-d4da-a8b3", "defaultCostLimit": -1, "hidden": true},
@@ -21,6 +21,7 @@
       {"name": "Games", "id": "a81d-3454-7652-6321", "hidden": false, "import": true, "targetId": "41e3-0078-7eb7-e70b", "type": "selectionEntry"},
       {"name": "Show Campaign", "id": "2f68-de1a-411b-be06", "hidden": false, "import": true, "targetId": "6779-5a12-5430-0683", "type": "selectionEntry"}
     ],
+    "profileTypes": [{"name": "Injury", "id": "3765-1a88-249c-c438", "hidden": false, "characteristicTypes": [{"name": "Description", "id": "cbfc-30ca-67ac-436d"}]}],
     "sharedSelectionEntries": [
       {
         "name": "Base",
@@ -62,17 +63,193 @@
         "type": "upgrade",
         "categoryLinks": [{"name": "Campaign", "id": "368b-64b6-c0ce-6bfb", "hidden": false, "primary": true, "targetId": "2921-b7da-80b7-3bbc"}],
         "constraints": [{"id": "2345-9780-caa0-22d7", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}],
-        "entryLinks": [{"name": "Game", "id": "ccf7-fc14-d38f-fc6e", "hidden": false, "import": true, "targetId": "b03e-a46d-a00f-d0a8", "type": "selectionEntry"}]
-      },
-      {
-        "name": "Game",
-        "id": "b03e-a46d-a00f-d0a8",
-        "hidden": false,
-        "import": true,
-        "type": "upgrade",
-        "entryLinks": [
-          {"name": "Wizard Experience", "id": "4d26-34a6-917c-4474", "hidden": false, "import": true, "targetId": "0620-2b94-7d73-d0fc", "type": "selectionEntryGroup"},
-          {"name": "Treasure", "id": "1165-dfc7-99a0-db0f", "hidden": false, "import": true, "targetId": "9b45-54ce-0dd8-4960", "type": "selectionEntryGroup"}
+        "selectionEntries": [
+          {
+            "name": "Game",
+            "id": "b03e-a46d-a00f-d0a8",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "selectionEntryGroups": [
+              {
+                "name": "Treasure",
+                "id": "9b45-54ce-0dd8-4960",
+                "collapsible": true,
+                "hidden": false,
+                "sortIndex": 1,
+                "entryLinks": [{"name": "Treasure", "id": "9225-d8d6-deda-a17a", "hidden": false, "import": true, "targetId": "2832-7923-98f3-a8cd", "type": "selectionEntry"}]
+              },
+              {
+                "name": "Wizard Experience",
+                "id": "0620-2b94-7d73-d0fc",
+                "collapsible": true,
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntries": [
+                  {
+                    "name": "Failed casts that resulted in the wizard or apprentice suffering damage",
+                    "id": "1117-3557-3965-b749",
+                    "hidden": false,
+                    "import": true,
+                    "sortIndex": 3,
+                    "type": "upgrade",
+                    "costs": [
+                      {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+                      {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+                      {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 5}
+                    ]
+                  },
+                  {
+                    "name": "Successful casts with a casting number greater than 6",
+                    "id": "38b3-d3ee-2db7-fc74",
+                    "hidden": false,
+                    "import": true,
+                    "sortIndex": 2,
+                    "type": "upgrade",
+                    "costs": [
+                      {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+                      {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+                      {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 10}
+                    ]
+                  },
+                  {
+                    "name": "Wizard participated",
+                    "id": "6e39-5603-ee0e-a719",
+                    "hidden": false,
+                    "import": true,
+                    "sortIndex": 1,
+                    "type": "upgrade",
+                    "constraints": [{"id": "9031-f167-e9e0-be18", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "costs": [
+                      {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+                      {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+                      {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 40}
+                    ]
+                  },
+                  {
+                    "name": "Treasure tokens secured",
+                    "id": "7943-17dd-da1d-9bab",
+                    "hidden": false,
+                    "import": true,
+                    "sortIndex": 4,
+                    "type": "upgrade",
+                    "costs": [
+                      {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+                      {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+                      {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 40}
+                    ]
+                  },
+                  {
+                    "name": "Uncontrolled creatures killed",
+                    "id": "d3f5-9f1f-6629-f571",
+                    "hidden": false,
+                    "import": true,
+                    "sortIndex": 5,
+                    "type": "upgrade",
+                    "constraints": [{"id": "d3b6-e048-65fa-c466", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 10}],
+                    "costs": [
+                      {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+                      {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+                      {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 5}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Captain Experience",
+                "id": "ff99-b74a-a531-4782",
+                "collapsible": true,
+                "hidden": false,
+                "sortIndex": 3,
+                "modifiers": [
+                  {
+                    "field": "hidden",
+                    "type": "set",
+                    "value": true,
+                    "conditions": [
+                      {
+                        "childId": "7c7f-009e-1472-3976",
+                        "childName": "Sellsword",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "force",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "name": "Captain participated",
+                    "id": "d015-f85b-8a69-9f40",
+                    "hidden": false,
+                    "import": true,
+                    "sortIndex": 1,
+                    "type": "upgrade",
+                    "constraints": [{"id": "e707-8c41-457a-3d1d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "costs": [
+                      {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+                      {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+                      {"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 0},
+                      {"name": "Captain Experience", "typeId": "14af-599a-768c-f8e1", "value": 10},
+                      {"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 0}
+                    ]
+                  },
+                  {
+                    "name": "Captain survived",
+                    "id": "9a5b-793f-0d11-fb21",
+                    "hidden": false,
+                    "import": true,
+                    "sortIndex": 2,
+                    "type": "upgrade",
+                    "constraints": [{"id": "bc31-ec87-d9e3-13ea", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "costs": [
+                      {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+                      {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+                      {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 0},
+                      {"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 0},
+                      {"name": "Captain Experience", "typeId": "14af-599a-768c-f8e1", "value": 10},
+                      {"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 0}
+                    ]
+                  },
+                  {
+                    "name": "Enemy soldiers or neutral creatures killed",
+                    "id": "5f50-8546-f451-1f33",
+                    "hidden": false,
+                    "import": true,
+                    "sortIndex": 3,
+                    "type": "upgrade",
+                    "costs": [
+                      {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+                      {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+                      {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 0},
+                      {"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 0},
+                      {"name": "Captain Experience", "typeId": "14af-599a-768c-f8e1", "value": 10},
+                      {"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 0}
+                    ]
+                  },
+                  {
+                    "name": "Enemy spellcasters killed",
+                    "id": "2a57-224f-4d11-b654",
+                    "hidden": false,
+                    "import": true,
+                    "sortIndex": 4,
+                    "type": "upgrade",
+                    "costs": [
+                      {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
+                      {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
+                      {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 0},
+                      {"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 0},
+                      {"name": "Captain Experience", "typeId": "14af-599a-768c-f8e1", "value": 20},
+                      {"name": "Captain Level", "typeId": "b3df-034f-98cc-ccb3", "value": 0}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         ]
       },
       {
@@ -91,6 +268,15 @@
         "type": "upgrade",
         "categoryLinks": [{"name": "Configuration", "id": "51d2-8c2e-90f6-f8ba", "hidden": false, "primary": true, "targetId": "a7f7-a7e7-379c-aa0f"}],
         "constraints": [{"id": "257a-0278-216f-eadb", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}]
+      },
+      {
+        "name": "Badly Wounded",
+        "id": "bd35-afb9-c235-bd0d",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [{"id": "a660-e4ef-4db0-7a66", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "modifiers": [{"field": "category", "type": "set-primary", "value": "9e8a-a70e-05ce-ab5c"}]
       }
     ],
     "sharedSelectionEntryGroups": [
@@ -219,81 +405,6 @@
         ]
       },
       {
-        "name": "Wizard Experience",
-        "id": "0620-2b94-7d73-d0fc",
-        "collapsible": true,
-        "hidden": false,
-        "selectionEntries": [
-          {
-            "name": "Failed casts that resulted in the wizard or apprentice suffering damage",
-            "id": "1117-3557-3965-b749",
-            "hidden": false,
-            "import": true,
-            "sortIndex": 3,
-            "type": "upgrade",
-            "costs": [
-              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
-              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
-              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 5}
-            ]
-          },
-          {
-            "name": "Successful casts with a casting number greater than 6",
-            "id": "38b3-d3ee-2db7-fc74",
-            "hidden": false,
-            "import": true,
-            "sortIndex": 2,
-            "type": "upgrade",
-            "costs": [
-              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
-              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
-              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 10}
-            ]
-          },
-          {
-            "name": "Wizard participated",
-            "id": "6e39-5603-ee0e-a719",
-            "hidden": false,
-            "import": true,
-            "sortIndex": 1,
-            "type": "upgrade",
-            "constraints": [{"id": "9031-f167-e9e0-be18", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
-            "costs": [
-              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
-              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
-              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 40}
-            ]
-          },
-          {
-            "name": "Treasure tokens secured",
-            "id": "7943-17dd-da1d-9bab",
-            "hidden": false,
-            "import": true,
-            "sortIndex": 4,
-            "type": "upgrade",
-            "costs": [
-              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
-              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
-              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 40}
-            ]
-          },
-          {
-            "name": "Uncontrolled creatures killed",
-            "id": "d3f5-9f1f-6629-f571",
-            "hidden": false,
-            "import": true,
-            "sortIndex": 5,
-            "type": "upgrade",
-            "constraints": [{"id": "d3b6-e048-65fa-c466", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 10}],
-            "costs": [
-              {"name": "gc", "typeId": "8af7-6c9e-2277-7dc1", "value": 0},
-              {"name": "Slots", "typeId": "002c-4fdb-9046-f296", "value": 0},
-              {"name": "Wizard Experience", "typeId": "a92e-f1c9-6aa7-8c9b", "value": 5}
-            ]
-          }
-        ]
-      },
-      {
         "name": "Experience and Levels",
         "id": "3d05-8970-1bda-5bbf",
         "collapsible": true,
@@ -385,13 +496,6 @@
             ]
           }
         ]
-      },
-      {
-        "name": "Treasure",
-        "id": "9b45-54ce-0dd8-4960",
-        "collapsible": true,
-        "hidden": false,
-        "entryLinks": [{"name": "Treasure", "id": "9225-d8d6-deda-a17a", "hidden": false, "import": true, "targetId": "2832-7923-98f3-a8cd", "type": "selectionEntry"}]
       },
       {
         "name": "Experience and Levels",
@@ -515,6 +619,107 @@
                   {"name": "Wizard Level", "typeId": "9ea2-3385-d4da-a8b3", "value": 1}
                 ],
                 "modifiers": [{"affects": "self.entries.associations.profiles.Spell", "field": "58ac-2774-9f17-eabf", "type": "decrement", "value": 1}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Permanent Injuries",
+        "id": "24d7-4ade-3905-9ac5",
+        "collapsible": true,
+        "hidden": false,
+        "selectionEntries": [
+          {
+            "name": "Lost Toes",
+            "id": "8bd9-208f-9264-3426",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "profiles": [
+              {
+                "name": "Lost Toes",
+                "id": "cebe-b6ee-3757-5509",
+                "hidden": false,
+                "typeId": "3765-1a88-249c-c438",
+                "typeName": "Injury",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "The spellcaster has lost one or more toes and suffers a permanent -1 penalty to all Move Rolls. This injury can be received twice, with a cumulative effect of -2 to all Move Rolls. Any further Lost Toes results must be re-rolled.",
+                    "typeId": "cbfc-30ca-67ac-436d"
+                  }
+                ],
+                "modifiers": [{"affects": "profiles.Figure", "field": "8610-5362-9799-a895", "type": "append", "value": " / "}]
+              }
+            ]
+          },
+          {
+            "name": "Smashed Leg",
+            "id": "fae7-6211-77db-c978",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "profiles": [
+              {
+                "name": "Smashed Leg",
+                "id": "5813-34f8-e82b-dfe8",
+                "hidden": false,
+                "typeId": "3765-1a88-249c-c438",
+                "typeName": "Injury",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "The spellcaster suffers permanent bone or muscle damage in their leg and suffers a permanent -2 Move penalty. This injury can be received twice, with a cumulative effect of -4 to Move. Any further Smashed Leg results must be rerolled.",
+                    "typeId": "cbfc-30ca-67ac-436d"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Crushed Arm",
+            "id": "800f-bb96-5c3c-8993",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "profiles": [
+              {
+                "name": "Crushed Arm",
+                "id": "1d22-2d85-2cce-c7a8",
+                "hidden": false,
+                "typeId": "3765-1a88-249c-c438",
+                "typeName": "Injury",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "The spellcaster suffers permanent bone or muscle damage in their arm and suffers a permanent -1 Fight penalty. This injury can be received twice, with a cumulative effect of -2 Fight. Any further Crushed Arm results must be re-rolled.",
+                    "typeId": "cbfc-30ca-67ac-436d"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lost Fingers",
+            "id": "07f7-d08f-7729-1578",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "profiles": [
+              {
+                "name": "Lost Fingers",
+                "id": "ff5e-1477-8017-ae5c",
+                "hidden": false,
+                "typeId": "3765-1a88-249c-c438",
+                "typeName": "Injury",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "The spellcaster has lost one or more fingers and suffers a permanent -1 Shoot penalty. This injury can be received twice, with a cumulative effect of -2 Shoot. Any further Lost Fingers results must be re-rolled.",
+                    "typeId": "cbfc-30ca-67ac-436d"
+                  }
+                ]
               }
             ]
           }
